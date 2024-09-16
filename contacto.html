@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | FASTMAIL</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
+   </head>
+
+    <body>
+    <header class="header">
+        <div class="top-section">
+            <div class="logo">Fastmail</div>
+            <div class="access">
+                <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="social">
+                <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="linkedin-icon.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+            <nav>
+                <a href="./sobre-nosotros.html">Quienes somos</a>
+                <a href="./servicios.html">Servicios</a>
+                <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+    <div class="palette-selector">
+        <button data-palette="modern-elegance">Modern Elegance</button>
+        <button data-palette="corporate-chic">Corporate Chic</button>
+        <button data-palette="sophisticated-slate">Sophisticated Slate</button>
+        <button data-palette="dynamic-energy">Dynamic Energy</button>
+        <button data-palette="professional-flair">Professional Flair</button>
+    </div>
+</section>
+
+    <!-- Lo pongo ahora porque si saco todo lo de acá arriba se buguea todo xd después borrar -->
+    <br><br><br><br><br>
+
+
+    <section class="content">
+        
+        <h2 style="color: red;">¡Escribinos!</h2>
+        <br>
+        <!-- Estilito así nomás pa que tenga algo de forma -->
+        <style>
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: black;
+        }
+    </style>
+        
+        <div class="container">
+        <form id="contactForm">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="company">Empresa:</label>
+            <input type="text" id="company" name="company" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+        
+        <!-- Validación de formulario -->
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let isValid = true;
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!firstName) {
+                alert('Complete el campo Nombre.');
+                isValid = false;
+            }
+            
+            if (!lastName) {
+                alert('Complete el campo Apellido.');
+                isValid = false;
+            }
+
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert('El Teléfono debe ser un número válido de 10 dígitos.');
+                isValid = false;
+            }
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('El Correo Electrónico debe ser un email válido.');
+                isValid = false;
+            }
+            
+            if (!company) {
+                alert('Complete el campo Empresa.');
+                isValid = false;
+            }
+            
+            if (!message) {
+                alert('El Mensaje es obligatorio.');
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Formulario enviado con éxito.');
+                // Dps se agrega la lógica/funcion pa enviar el form
+            }
+        });
+    </script>
+
+    <br><br>
+
+<p>También podés comunicarte telefónicamente de Lunes a Viernes, de 9 a 17hs.<br>
+📞 4766 6007 <br>
+📞 7700-1042 <br>
+📍 Av. Ader 495 (Esq. Thames) Boulogne, Buenos Aires, Argentina.</p>
+
+    </section>
+
+    <footer class="footer">
+        <a href="./politica-de-privacidad.html">Política de Privacidad</a>
+        <a href="./contacto.html">Contáctanos</a>
+        <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>

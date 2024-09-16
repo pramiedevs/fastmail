@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Postales | FASTMAIL</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
+   </head>
+
+    <body>
+    <header class="header">
+        <div class="top-section">
+            <div class="logo">Fastmail</div>
+            <div class="access">
+                <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="social">
+                <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="linkedin-icon.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+            <nav>
+                <a href="./sobre-nosotros.html">Quienes somos</a>
+                <a href="./servicios.html">Servicios</a>
+                <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+    <div class="palette-selector">
+        <button data-palette="modern-elegance">Modern Elegance</button>
+        <button data-palette="corporate-chic">Corporate Chic</button>
+        <button data-palette="sophisticated-slate">Sophisticated Slate</button>
+        <button data-palette="dynamic-energy">Dynamic Energy</button>
+        <button data-palette="professional-flair">Professional Flair</button>
+    </div>
+</section>
+
+    <!-- Lo pongo ahora porque si saco todo lo de acá arriba se buguea todo xd después borrar -->
+    <br><br><br><br><br>
+
+
+    <section class="content">
+        
+        <!-- Sección 1 -->
+        <div class="contenido1">
+        <h2 style="color: red;">Servicios postales</h2>
+        <center>
+        <p>Las siguientes opciones corresponden a nuestros servicios postales. Seleccioná la que corresponda.</p>
+        </center>
+        <br><br>
+        
+        <!-- Rectangulos y ventanas energentes provisorias -->
+        <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .rectangle:hover {
+            transform: scale(1.05);
+        }
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.4); 
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px; 
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: modalopen 0.4s;
+        }
+        @keyframes modalopen {
+            from {transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        </style>
+        <div class="container">
+        <div class="rectangle" onclick="openModal('En este servicio las piezas postales (sobres) se entregan con la modalidad bajo puerta, es decir, sin la necesidad de presencia por parte del destinatario ni de los moradores de la vivienda; y en la cual no se toma ni se asienta ningún dato respecto de la entrega, ni del domicilio del destinatario. Este servicio es ideal para el envío de facturas, mailings y publicidad. No cuenta con seguimiento online, ni con constancia de entrega.')">Simple bajo puerta</div>
+
+        <div class="rectangle" onclick="openModal('Es un servicio con entrega en mano (bajo firma), en donde el distribuidor asienta en un acuse de recibo físico o digital todos los datos de la entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Este servicio consta de 2 visitas. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como (No Responde). Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Acuse de recibo</div>
+
+        <div class="rectangle" onclick="openModal('Se trata de un servicio de entrega en mano (bajo firma). Este servicio tiene la particularidad que se le adosa a la parte exterior de cada sobre una copia del contenido que tenga dicho sobre en su interior. Esta copia obra como un acuse de recibo en el que constarán todos los datos de entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Esta copia se rinde al remitente, por lo que es ideal para aquellos servicios en el que los clientes necesiten tener una constancia detallada de la correspondencia. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como: No Responde. Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Carta con copia</div>
+
+        <div class="rectangle" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con copia certificada y aviso de recibo</div>
+
+        <div class="rectangle" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con firma digitalizada</div>
+
+        <div class="rectangle" onclick="openModal('Se trata de un formulario pre impreso con dos copias que se utiliza para diferentes tipos de notificaciones y/o intimaciones.')">Carta notificada</div>
+
+        <div class="rectangle" onclick="openModal('Este servicio posibilita a los clientes enviar y recibir en un bolsín cerrado y rotulado todo tipo de documentación dirigida a destinos específicos y en los plazos fijados por acuerdo previo. Este servicio le permitirá a su empresa mantener un flujo permanente de comunicación e intercambio de documentación entre sucursales o con terceros.')">Bolsines</div>
+
+        <a href="./gestiones-especiales.html"><div class="rectangle">Gestiones especiales</div></a>
+        
+        <div class="rectangle" onclick="openModal('Este es un servicio de distribucion con entrega en la puerta del destinatario')">Puerta a puerta</div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+        </div>
+
+        <script>
+        function openModal(message) {
+            document.getElementById('modal-text').innerText = message;
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                closeModal();
+            }
+        }
+    </script>
+
+        </div>
+        <br><br>
+        <center><a href="./descarga-de-archivos.html"><button>→ Descarga de archivos</button></a></center>
+
+    </section>
+
+    <footer class="footer">
+        <a href="./politica-de-privacidad.html">Política de Privacidad</a>
+        <a href="./contacto.html">Contáctanos</a>
+        <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>
