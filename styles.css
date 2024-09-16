@@ -1,8 +1,8 @@
 :root {
     --main-color: #e53935;
     --secondary-color: #2c387e;
-    --cta-color: #ff6f60;
-    --hover-color: #1976d2;
+    --cta-color: #3c5369;
+    --hover-color: #8ba9d3;
 }
 
 body {
@@ -10,43 +10,13 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f4f4f4;
 }
 
-.content {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.content h2 {
-    font-size: 2.5em;
-    margin-top: 0;
-    text-align: center;
-    color: #0e44a7; /* CTA buttons color */
-}
-
-.feature {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.feature h3 {
-    font-size: 1.8em;
-    margin: 0;
-    color: #0e44a7; /* CTA buttons color */
-}
-
-.feature p {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
+/* Header styles */
 .header {
     background-color: var(--main-color);
     color: #fff;
-    /* Other styles */
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -54,45 +24,53 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    height: 120px; /* Adjust this height according to content */
+    height: 80px; /* Adjusted height for a more compact look */
 }
+
 .header .top-section,
 .header .bottom-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    height: 50%;
+    padding: 10px 20px; /* Reduced padding for a more compact header */
 }
+
 .header .logo {
-    font-size: 1.8em;
+    font-size: 1.6em; /* Slightly smaller for a more balanced look */
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .header .access {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
+
 .header .access a {
     background-color: var(--cta-color);
     border: 2px solid var(--cta-color);
+    color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
     font-size: 0.9em;
     font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .header .access a:hover {
     background-color: var(--hover-color);
     border-color: var(--hover-color);
 }
+
 .header .top-section {
     background-color: var(--main-color);
 }
 
 .header .bottom-section {
-     background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
 }
+
 .header .social img {
     height: 20px;
     width: 20px;
@@ -101,26 +79,45 @@ body {
 
 .header nav {
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Reduced gap for a more compact look */
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header nav a:hover {
+    background-color: var(--cta-color);
     color: #fff;
 }
+
+/* Hero section styles */
 .hero {
     background-color: var(--secondary-color);
-    /* Other styles */
-}
-button {
-    background-color: var(--main-color);
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 60px 20px;
 }
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
 .cta-button {
     background-color: var(--cta-color);
+    color: #fff;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 25px;
@@ -134,6 +131,57 @@ button {
     background-color: var(--hover-color);
 }
 
+/* Content section styles */
+.content {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.feature p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Button styles */
+button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Footer styles */
 .footer {
     background-color: var(--main-color);
     color: #fff;
@@ -151,11 +199,8 @@ button {
 
 .footer a:hover {
     text-decoration: underline;
-    background-color: #b1abab; /* Secondary color */
 }
 
 .footer p {
     margin: 0;
 }
-
-/* Other styles */
