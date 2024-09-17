@@ -119,7 +119,7 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    background-image: url(/img/bg.png);
+    background-image: url(/img/bg2.png);
     background-size: cover;
     height: 90vh;
     color: #fff; /* Ensure text is visible on background */
@@ -173,19 +173,32 @@ body {
     margin-right: 6vw;
     width: 60vh;
     opacity: 0; /* Initially hidden */
-    animation: fadeIn 4s forwards;
-    animation-delay: 3s; /* Fade in after 1 second */
+    animation: fadeIn 5s forwards;
+    animation-delay: 2s; /* Fade in after 1 second */
 }
 
 .hero .logo {
-    top:35vh;
+    top:45vh;
     right: 0;
-    margin-right: 50px;
+    margin-right: 8vw;
     width: 70vh;
     opacity: 0; /* Initially hidden */
     transform: translateX(100px); /* Start 100px off-screen to the right */
     animation: fadeInAndSlideIn 3s forwards;
     animation-delay: 4s; /* Fade in and slide in after 2 seconds */
+    z-index: 1000;
+}
+.hero .logobg{
+    top:30vh;
+    right: 0;
+    margin-right: .5vw;
+    width: 70vh;
+    opacity: 0;
+    transform: translateX(-1000px); 
+    animation: fadeInAndSlideIn2 .3s forwards;
+    animation-delay: 5s; /* Fade in and slide in after 2 seconds */
+    z-index: 1;
+
 }
 
 @keyframes fadeIn {
@@ -197,6 +210,12 @@ body {
 @keyframes fadeInAndSlideIn {
     to {
         opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInAndSlideIn2 {
+    to {
+        opacity: .8;
         transform: translateX(0);
     }
 }
