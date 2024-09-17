@@ -47,14 +47,14 @@ body {
 }
 
 .header .logo {
-    font-size: 6em; /* Slightly smaller for a more balanced look */
+    font-size: 4em;
     font-weight: bold;
     text-transform: uppercase;
 }
 .social{
     color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .header .access {
@@ -69,7 +69,7 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 10px 10px;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 500;
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
@@ -98,9 +98,9 @@ body {
 
 .header nav {
     display: flex;
-    gap: 10px; /* Reduced gap for a more compact look */
+    gap: 10px; 
     color: #fff;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .header nav a {
@@ -129,7 +129,7 @@ body {
     margin-top: 20vh;
     display: flex;
     flex-direction: column;
-    font-size: 2.5em; 
+    font-size: 1.5em; 
     margin-left: 2vw;
     width: 60%;
 }
@@ -283,6 +283,16 @@ button {
 
 button:hover {
     background-color: var(--hover-color);
+}
+
+
+.animation-container{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    height: 300px;
+    bottom: -812px;
+    z-index: 0;
 }
 
 /* Footer styles */
