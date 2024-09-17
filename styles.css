@@ -1,6 +1,6 @@
 :root {
     --main-color: #e53935;
-    --secondary-color: #2c387e;
+    --secondary-color: #26293a;
     --cta-color: #3c5369;
     --hover-color: #8ba9d3;
 }
@@ -38,6 +38,16 @@ body {
     height: 20vh; /* Adjusted height for a more compact look */
 }
 
+.header-transparent {
+    background-color: rgba(218, 86, 86, 0.308); /* Adjust as needed */
+}
+.header-half-solid {
+    background-color: #e53835bd; /* Half color */
+}
+.header-solid {
+    background-color: #e53835; /* Solid color */
+}
+
 .header .top-section,
 .header .bottom-section {
     display: flex;
@@ -52,9 +62,22 @@ body {
     text-transform: uppercase;
 }
 .social{
-    color: white;
-    text-decoration: none;
+    display: flex;
+    gap: .5em;
+    
+}
+.social a {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    text-decoration: none; /* Optional: Remove underline from links */
+    color:white;
     font-size: 1em;
+}
+
+.social img {
+    margin-right: 8px; /* Space between image and text */
+    width: 24px; /* Optional: Set a consistent size for icons */
+    height: 24px; /* Optional: Set a consistent size for icons */
 }
 
 .header .access {
@@ -86,7 +109,7 @@ body {
 }
 
 .header .bottom-section {
-    background-color: #2c387ee3;
+    background-color: #26293a;
     height: 40%;
 }
 
@@ -147,8 +170,8 @@ body {
     width:300px;
     margin-left: 30px;
     display: inline-block;
-    background-color: #cfcaca;
-    color: #ec1e1e;
+    background-color: var(--secondary-color);
+    color: #dbdada;
     text-decoration: none;
     transition: background-color 0.3s ease;
     font-family: "Montserrat",Sans-serif;
@@ -159,7 +182,9 @@ body {
 }
 
 .hero .cta-button:hover {
-    background-color: #0056b3; /* Button color on hover */
+    background-color: var(--hover-color); /* Button color on hover */
+    color:var(--secondary-color);
+    transform:scale(1.1);
 }
 
 .hero .world, .hero .logo {
@@ -184,7 +209,7 @@ body {
     width: 70vh;
     opacity: 0; /* Initially hidden */
     transform: translateX(100px); /* Start 100px off-screen to the right */
-    animation: fadeInAndSlideIn 3s forwards;
+    animation: fadeInAndSlideIn 2.5s forwards;
     animation-delay: 4s; /* Fade in and slide in after 2 seconds */
     z-index: 1000;
 }
@@ -196,7 +221,7 @@ body {
     opacity: 0;
     transform: translateX(-1000px); 
     animation: fadeInAndSlideIn2 .3s forwards;
-    animation-delay: 5s; /* Fade in and slide in after 2 seconds */
+    animation-delay: 5.5s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
 
 }
@@ -293,6 +318,7 @@ button:hover {
     height: 300px;
     bottom: -812px;
     z-index: 0;
+    pointer-events: none;
 }
 
 /* Footer styles */
