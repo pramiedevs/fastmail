@@ -142,7 +142,7 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    background-image: url(/img/bg2.png);
+    background-image: url(./img/bg2.png);
     background-size: cover;
     height: 90vh;
     color: #fff; /* Ensure text is visible on background */
