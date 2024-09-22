@@ -1,8 +1,10 @@
 :root {
-    --main-color: #e53935;
-    --secondary-color: #26293a;
+    --main-color: #cd2318;
+    --secondary-color: #666666;
     --cta-color: #3c5369;
     --hover-color: #8ba9d3;
+    --bg-color: #d8dacf;
+    --bd-color-dark:#4B4B4D;
 }
 html, body {
     overflow: auto; /* Ensures that scrolling is still possible */
@@ -21,12 +23,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #4B4B4D;
     background-color: #f4f4f4;
 }
 
 /* Header styles */
 .header {
+    background: var(--main-color);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -38,15 +41,6 @@ body {
     height: 20vh; /* Adjusted height for a more compact look */
 }
 
-.header-transparent {
-    background-color: rgba(218, 86, 86, 0.308); /* Adjust as needed */
-}
-.header-half-solid {
-    background-color: #e53835bd; /* Half color */
-}
-.header-solid {
-    background-color: #e53835; /* Solid color */
-}
 
 .header .top-section,
 .header .bottom-section {
@@ -56,10 +50,8 @@ body {
     padding: 10px 20px; /* Reduced padding for a more compact header */
 }
 
-.header .logo {
-    font-size: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
+.header .logo img{
+    width:30vh;
 }
 .social{
     display: flex;
@@ -71,7 +63,7 @@ body {
     align-items: center; /* Centers items vertically */
     text-decoration: none; /* Optional: Remove underline from links */
     color:white;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .social img {
@@ -87,7 +79,7 @@ body {
 
 .header .access a {
     margin-right: 20px;
-    background-color: var(--cta-color);
+    background-color: var(--secondary-color);
     border: 2px solid var(--cta-color);
     color: #fff;
     text-decoration: none;
@@ -104,26 +96,26 @@ body {
 }
 
 .header .top-section {
-    background-color: #e5393587;
     height: 60%;
 }
 
 .header .bottom-section {
-    background-color: #26293a;
+    background-color: var(--bd-color-dark);
     height: 40%;
 }
 
 .header .social img {
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     margin: 0 5px;
+    padding-left: 10px;
 }
 
 .header nav {
     display: flex;
     gap: 10px; 
     color: #fff;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .header nav a {
@@ -142,7 +134,7 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    background-image: url(./img/bg2.png);
+    background-image: url(./branding/header2.png);
     background-size: cover;
     height: 90vh;
     color: #fff; /* Ensure text is visible on background */
@@ -155,10 +147,13 @@ body {
     font-size: 1.5em; 
     margin-left: 2vw;
     width: 60%;
+    color:black;
+
 }
 .hero h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin-top: 30vh;
+    color:black;
 }
 
 .hero p {
@@ -192,38 +187,41 @@ body {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-.hero .world {
-    top:25vh;
-    right: 0;
-    margin-right: 6vw;
-    width: 60vh;
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 5s forwards;
-    animation-delay: 2s; /* Fade in after 1 second */
-}
 
 .hero .logo {
-    top:45vh;
-    right: 0;
+    top:30vh;
+    left: 0;    
     margin-right: 8vw;
     width: 70vh;
     opacity: 0; /* Initially hidden */
     transform: translateX(100px); /* Start 100px off-screen to the right */
-    animation: fadeInAndSlideIn 2.5s forwards;
-    animation-delay: 4s; /* Fade in and slide in after 2 seconds */
-    z-index: 1000;
+    animation: fadeInAndSlideIn 3s forwards;
+    animation-delay: 2s; /* Fade in and slide in after 2 seconds */
+    z-index: 2;
 }
-.hero .logobg{
+.logo{
+    margin-left: 4vh;
+}
+.hero .logobg{    
+    left:-3.5vh;
     top:30vh;
     right: 0;
-    margin-right: .5vw;
-    width: 70vh;
+    width: 12vh;
     opacity: 0;
     transform: translateX(-1000px); 
-    animation: fadeInAndSlideIn2 .3s forwards;
-    animation-delay: 5.5s; /* Fade in and slide in after 2 seconds */
+    animation: fadeInAndSlideIn2 .9s forwards;
+    animation-delay: 3s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
 
+}
+.hero .logosecondary{
+    top:43vh;
+    left:-7.5vh;
+    width: 70vh;
+    opacity: 0; 
+    animation: fadeIn 4s forwards;
+    animation-delay: 3s; /* Fade in and slide in after 2 seconds */
+    z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -241,7 +239,7 @@ body {
 @keyframes fadeInAndSlideIn2 {
     to {
         opacity: .8;
-        transform: translateX(0);
+        transform: translateX(75vh);
     }
 }
 .cta-button {
