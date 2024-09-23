@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Helvetica;
     margin: 0;
     padding: 0;
     color: #4B4B4D;
@@ -134,7 +134,7 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    background-image: url(./branding/header2.png);
+    background-image: url(./branding/header1.png);
     background-size: cover;
     height: 90vh;
     color: #fff; /* Ensure text is visible on background */
@@ -189,10 +189,10 @@ body {
 
 
 .hero .logo {
-    top:30vh;
+    top:25vh;
     left: 0;    
     margin-right: 8vw;
-    width: 70vh;
+    width: 90vh;
     opacity: 0; /* Initially hidden */
     transform: translateX(100px); /* Start 100px off-screen to the right */
     animation: fadeInAndSlideIn 3s forwards;
@@ -203,21 +203,39 @@ body {
     margin-left: 4vh;
 }
 .hero .logobg{    
-    left:-3.5vh;
-    top:30vh;
+    top:29vh;
     right: 0;
     width: 12vh;
     opacity: 0;
     transform: translateX(-1000px); 
     animation: fadeInAndSlideIn2 .9s forwards;
-    animation-delay: 3s; /* Fade in and slide in after 2 seconds */
+    animation-delay: 2.5s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
-
+}
+.hero .logobg2{    
+    top:29vh;
+    right: 0;
+    width: 12vh;
+    opacity: 0;
+    transform: translateX(-1000px); 
+    animation: fadeInAndSlideIn3 4s forwards;
+    animation-delay: 1s; /* Fade in and slide in after 2 seconds */
+    z-index: 1;
+}
+.hero .logobg3{    
+    top:29vh;
+    right: 0;
+    width: 12vh;
+    opacity: 0;
+    transform: translateX(-1000px); 
+    animation: fadeInAndSlideIn3 4s forwards;
+    animation-delay: 1.3s; /* Fade in and slide in after 2 seconds */
+    z-index: 1;
 }
 .hero .logosecondary{
-    top:43vh;
+    top:25vh;
     left:-7.5vh;
-    width: 70vh;
+    width: 90vh;
     opacity: 0; 
     animation: fadeIn 4s forwards;
     animation-delay: 3s; /* Fade in and slide in after 2 seconds */
@@ -242,6 +260,12 @@ body {
         transform: translateX(75vh);
     }
 }
+@keyframes fadeInAndSlideIn3 {
+    to {
+        opacity: .8;
+        transform: translateX(275vh);
+    }
+}
 .cta-button {
     background-color: var(--cta-color);
     color: #fff;
@@ -260,15 +284,15 @@ body {
 
 /* Content section styles */
 .content {
+    display: flex;
     padding: 60px 20px;
-    max-width: 1200px;
+    width:100%;
     margin: 0 auto;
 }
 
 .content h2 {
     font-size: 2.5em;
-    margin-top: 0;
-    text-align: center;
+    margin-left: 45vw;
     color: var(--main-color);
 }
 
