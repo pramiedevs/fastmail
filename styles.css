@@ -25,6 +25,15 @@ body {
     padding: 0;
     color: #000000;
 }
+.access {
+    order:1;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+}
+
+.logo {
+    order: 2;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -46,11 +55,18 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: 20vh; /* Adjusted height for a more compact look */
 }
+.mobile-menu {
+    display: none; /* Hide mobile menu by default */
+    background: #fff; /* Background color */
+    position: absolute; /* Positioning */
+    top: 60px; /* Adjust to position below header */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it appears above other content */
+}
 
 
 .header .top-section,
 .header .bottom-section {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; /* Reduced padding for a more compact header */
@@ -71,11 +87,50 @@ body {
     color:white;
     font-size: 2vh;
 }
+@media (max-width: 768px) {
+    .header{
+        width: 72%;
+    }
+    .top-section {
+        flex-direction: row; /* Keep top-section in a row */
+    }
 
+    .access {
+        order: 2; /* Move access links to the left */
+    }
 
-.header .access {
-    display: flex;
-    gap: 10px;
+    .logo {
+        order: 1; /* Move logo to the right */
+        text-align: right; /* Align logo right */
+    }
+
+    .bottom-section {
+        display: none; /* Hide bottom section on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none; /* Hide mobile menu by default */
+        background: #fff; /* Background color */
+        position: absolute; /* Positioning */
+        top: 60px; /* Adjust to position below header */
+        width: 100%; /* Full width */
+        z-index: 10; /* Ensure it appears above other content */
+    }
+
+    .mobile-menu.active {
+        display: block; /* Show mobile menu when active */
+    }
+
+    .mobile-social a,
+    .mobile-menu nav a {
+        display: block; /* Stack links vertically */
+        padding: 10px; /* Space between links */
+    }
 }
 
 .header .access a {
@@ -96,8 +151,15 @@ body {
 }
 
 .header .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60%;
     border-bottom: solid white 2px;
+}
+.access {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
 }
 
 .header .bottom-section {
@@ -165,41 +227,7 @@ body {
     margin-left:10vh;
 }
 
-/* Media query for mobile */
-@media (max-width: 768px) {
 
-    .hero-container {
-        flex-direction: column; 
-    }
-    .hero-image{
-        margin-top: 0;
-    }
-    
-    /* Optional: Add margin to the content section */
-    .content {
-        margin-top: 75vh;
-        flex-direction: column;
-        flex: 1; /* This will push the footer to the bottom */
-        padding: 20px; /* Optional padding for content */
-        position: relative; /* Set to relative for absolute children */
-    }
-    .hero .logobg{
-        top:27vh;
-    }
-    .hero .logo{
-        width:50vh;
-    }
-    .hero .logosecondary{
-        width:50vh;
-    }
-
-    @keyframes fadeInAndSlideIn2 {
-        to {
-            opacity: .8;
-            transform: translateX(43vh);
-        }
-    }
-}
 .hero h1 {
     font-size: 5vh;
     margin-top: 25vh;
@@ -272,8 +300,8 @@ body {
     width: 12vh;
     opacity: 0;
     transform: translateX(-1000px); 
-    animation: fadeInAndSlideIn3 4s forwards;
-    animation-delay: 1s; /* Fade in and slide in after 2 seconds */
+    animation: fadeInAndSlideIn3 2s forwards;
+    animation-delay: 2s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
 }
 .hero .logobg3{    
@@ -282,8 +310,8 @@ body {
     width: 12vh;
     opacity: 0;
     transform: translateX(-1000px); 
-    animation: fadeInAndSlideIn3 4s forwards;
-    animation-delay: 1.3s; /* Fade in and slide in after 2 seconds */
+    animation:  fadeInAndSlideIn3 2s forwards;
+    animation-delay: 2.5s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
 }
 .hero .logosecondary{
@@ -314,11 +342,16 @@ body {
     }
 }
 @keyframes fadeInAndSlideIn3 {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
     to {
-        opacity: .8;
-        transform: translateX(275vh);
+        opacity: 0;
+        transform: translateX(48vh); /* Slide to 43vh */
     }
 }
+
 
 .cta-button:hover {
     background: var(--hover-color);
@@ -418,4 +451,60 @@ button:hover {
 
 .footer p {
     margin: 0;
+}
+/* Media query for mobile */
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column; 
+    }
+    .hero-image{
+        margin-top: 0;
+    }
+    .hero .logo{
+        width: 60vh;
+    }
+    .hero .logobg{
+        width: 10vh;
+        top:27vh;
+
+    }
+    .hero .logobg2{
+        width: 10vh;
+        top:27vh;
+    }
+    .hero .logobg3{
+        width: 10vh;
+        top:27vh;
+
+    }
+    
+    /* Optional: Add margin to the content section */
+    .content {
+        margin-top: 75vh;
+        flex-direction: column;
+        flex: 1; /* This will push the footer to the bottom */
+        padding: 20px; /* Optional padding for content */
+        position: relative; /* Set to relative for absolute children */
+    }
+    .header .access a{
+        margin-left: -20px;
+        width: 150px;
+    }
+    @keyframes fadeInAndSlideIn2 {
+        to {
+            opacity: .8;
+            transform: translateX(50vh);
+        }
+    }
+    @keyframes fadeInAndSlideIn3 {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateX(70vh); /* Slide to 43vh */
+        }
+    }
 }

@@ -11,32 +11,53 @@
 
     <body>
 
-    <header class="header" id="header">
-        <div class="top-section">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./branding/whitelogo.png" alt="">
-                </a>                
+        <header class="header" id="header">
+            <div class="top-section">
+                <div class="access">
+                    <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                    <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+                </div>
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./branding/whitelogo.png" alt="Logo">
+                    </a>                
+                </div>
             </div>
-            <div class="access">
-                <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
-                <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+            <div class="bottom-section uppercase">
+                <div class="social">
+                    <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="./img/facebook_icon.svg" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="./img/instagram_icon.svg" alt="Instagram"> Instagram</a>
+                    <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="./img/linkedin_icon.png" alt="Linkedin">LinkedIn</a>
+                </div>
+                <nav>
+                    <a href="./sobre-nosotros.html">Quienes somos</a>
+                    <a href="./servicios.html">Servicios</a>
+                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                </nav>
             </div>
-        </div>
-        <div class="bottom-section uppercase">
-            <div class="social">
-                <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="./img/facebook_icon.svg" alt="Facebook">Facebook</a>
-                <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="./img/instagram_icon.svg" alt="Instagram"> Instagram</a>
-                <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="./img/linkedin_icon.png" alt="Linkedin">LinkedIn</a>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-social">
+                    <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/fastmailenvios" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/company/fastmailenvios/">LinkedIn</a>
+                </div>
+                <nav>
+                    <a href="./sobre-nosotros.html">Quienes somos</a>
+                    <a href="./servicios.html">Servicios</a>
+                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                </nav>
             </div>
-            <nav>
-                <a href="./sobre-nosotros.html">Quienes somos</a>
-                <a href="./servicios.html">Servicios</a>
-                <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
-            </nav>
-        </div>
-    </header>
+        </header>
+        <script>
+            function toggleMenu() {
+                const mobileMenu = document.getElementById("mobileMenu");
+                mobileMenu.classList.toggle("active"); // Toggle active class
+            }
+        </script>
+        
     <div class="container">
         <section class="hero">
             <div class="hero-container">
