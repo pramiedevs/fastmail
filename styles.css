@@ -124,6 +124,7 @@ body {
 
     .mobile-menu.active {
         display: block; /* Show mobile menu when active */
+        margin-top: 12vh;
     }
 
     .mobile-social a,
