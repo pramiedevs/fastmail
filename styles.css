@@ -1,8 +1,8 @@
 :root {
     --main-color: #cd2318;
-    --secondary-color: #666666;
+    --secondary-color: #aca5a5;
     --cta-color: #666666;
-    --hover-color: linear-gradient(to right, #cd2318, #dfa888, #f0deca);
+    --hover-color: linear-gradient(to right, #cd2318, #e63030, #f08b49, #9c1d1d);
     --bg-color: #d8dacf;
     --bd-color-dark:#4B4B4D;
 }
@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
-    background-color: #f4f4f4;
+    background-color: #d9cdcd;
 }
 
 .uppercase {
@@ -77,7 +77,7 @@ body {
 
 .header .access a {
     margin-right: 20px;
-    background-color: var(--cta-color);
+    background:linear-gradient(to right, #cd2318, #dfa888, #f0deca);
     border: 2px solid var(--main-color);
     color: #fff;
     text-decoration: none;
@@ -89,15 +89,16 @@ body {
 }
 
 .header .access a:hover {
-    background: var(--hover-color);
+    border:solid white 1.9px;
 }
 
 .header .top-section {
     height: 60%;
+    border-bottom: solid white 2px;
 }
 
 .header .bottom-section {
-    background-color: var(--bd-color-dark);
+    background-color: var(--secondary-color);
     height: 40%;
 }
 
@@ -121,11 +122,12 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    padding:10px;
 }
 
 .header nav a:hover {
-    background: var(--hover-color);
-    color: #fff;
+    background: white;
+    color: var(--main-color);
 }
 
 /* Hero section styles */
@@ -181,7 +183,6 @@ body {
 
 .hero .cta-button:hover {
     background-color: var(--hover-color); /* Button color on hover */
-    color:black;
     transform:scale(1.1);
 }
 
@@ -284,14 +285,17 @@ body {
 /* Content section styles */
 .content {
     display: flex;
-    padding: 60px 20px;
-    width:100%;
+    padding: 20px;
+    width:95%;
     margin: 0 auto;
+    align-items: center;
 }
 
-.content h2 {
+#h2Servicios {
+    display: block;
+    margin: 0;
     font-size: 5vh;
-    margin-left: 45vw;
+    text-align: center;
     color: var(--main-color);
 }
 
