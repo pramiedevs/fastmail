@@ -1,8 +1,8 @@
 :root {
     --main-color: #cd2318;
     --secondary-color: #666666;
-    --cta-color: #3c5369;
-    --hover-color: #8ba9d3;
+    --cta-color: #666666;
+    --hover-color: linear-gradient(to right, #cd2318, #dfa888, #f0deca);
     --bg-color: #d8dacf;
     --bd-color-dark:#4B4B4D;
 }
@@ -23,10 +23,13 @@ body {
     font-family: Helvetica;
     margin: 0;
     padding: 0;
-    color: #4B4B4D;
+    color: #000000;
     background-color: #f4f4f4;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
 /* Header styles */
 .header {
     background: var(--main-color);
@@ -55,7 +58,7 @@ body {
 }
 .social{
     display: flex;
-    gap: .5em;
+    gap: .5vh;
     
 }
 .social a {
@@ -63,14 +66,9 @@ body {
     align-items: center; /* Centers items vertically */
     text-decoration: none; /* Optional: Remove underline from links */
     color:white;
-    font-size: 2em;
+    font-size: 2vh;
 }
 
-.social img {
-    margin-right: 8px; /* Space between image and text */
-    width: 24px; /* Optional: Set a consistent size for icons */
-    height: 24px; /* Optional: Set a consistent size for icons */
-}
 
 .header .access {
     display: flex;
@@ -79,20 +77,19 @@ body {
 
 .header .access a {
     margin-right: 20px;
-    background-color: var(--secondary-color);
-    border: 2px solid var(--cta-color);
+    background-color: var(--cta-color);
+    border: 2px solid var(--main-color);
     color: #fff;
     text-decoration: none;
-    padding: 10px 10px;
-    font-size: 1em;
+    padding: 12px 12px;
+    font-size: 2vh;
     font-weight: 500;
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .header .access a:hover {
-    background-color: var(--hover-color);
-    border-color: var(--hover-color);
+    background: var(--hover-color);
 }
 
 .header .top-section {
@@ -105,8 +102,8 @@ body {
 }
 
 .header .social img {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     margin: 0 5px;
     padding-left: 10px;
 }
@@ -115,7 +112,7 @@ body {
     display: flex;
     gap: 10px; 
     color: #fff;
-    font-size: 2em;
+    font-size: 2vh;
 }
 
 .header nav a {
@@ -127,7 +124,7 @@ body {
 }
 
 .header nav a:hover {
-    background-color: var(--cta-color);
+    background: var(--hover-color);
     color: #fff;
 }
 
@@ -151,34 +148,40 @@ body {
 
 }
 .hero h1 {
-    font-size: 2.5em;
-    margin-top: 30vh;
-    color:black;
+    font-size: 5vh;
+    margin-top: 25vh;
+    color:var(--main-color);
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 3vh;
+    margin-top:1vh;
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Fade effect */
+}
+.hero-text p.visible, .hero-text .cta-button.visible {
+    opacity: 1; /* Fully visible when this class is added */
 }
 
 .hero .cta-button {
     text-align: center;
     width:300px;
-    margin-left: 30px;
+    margin-top: 5vh;
+    margin-left: 16vh;
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     color: #dbdada;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-family: "Montserrat",Sans-serif;
-    font-weight: 600;
     letter-spacing: -.4px;
     border-radius: 6px 6px 6px 6px;
     padding: 14px 22px 14px 22px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Fade effect */
 }
 
 .hero .cta-button:hover {
     background-color: var(--hover-color); /* Button color on hover */
-    color:var(--secondary-color);
+    color:black;
     transform:scale(1.1);
 }
 
@@ -194,7 +197,6 @@ body {
     margin-right: 8vw;
     width: 90vh;
     opacity: 0; /* Initially hidden */
-    transform: translateX(100px); /* Start 100px off-screen to the right */
     animation: fadeInAndSlideIn 3s forwards;
     animation-delay: 2s; /* Fade in and slide in after 2 seconds */
     z-index: 2;
@@ -234,7 +236,6 @@ body {
 }
 .hero .logosecondary{
     top:25vh;
-    left:-7.5vh;
     width: 90vh;
     opacity: 0; 
     animation: fadeIn 4s forwards;
@@ -266,20 +267,18 @@ body {
         transform: translateX(275vh);
     }
 }
-.cta-button {
-    background-color: var(--cta-color);
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
 
 .cta-button:hover {
-    background-color: var(--hover-color);
+    background: var(--hover-color);
+    background-size: 200% 200%; /* Optional: for animated hover effect */
+    animation: gradient-animation 3s ease infinite; /* Optional: for smooth transition */
+}
+
+/* Optional: Add keyframes for animation if desired */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Content section styles */
@@ -291,7 +290,7 @@ body {
 }
 
 .content h2 {
-    font-size: 2.5em;
+    font-size: 5vh;
     margin-left: 45vw;
     color: var(--main-color);
 }
@@ -305,7 +304,7 @@ body {
 }
 
 .feature h3 {
-    font-size: 1.8em;
+    font-size: 2vh;
     margin: 0;
     color: var(--main-color);
 }

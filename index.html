@@ -10,7 +10,7 @@
    </head>
 
     <body>
-    <header class="header header-transparent" id="header">
+    <header class="header" id="header">
         <div class="top-section">
             <div class="logo">
                 <a href="./index.html">
@@ -22,7 +22,7 @@
                 <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
             </div>
         </div>
-        <div class="bottom-section">
+        <div class="bottom-section uppercase">
             <div class="social">
                 <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="./img/facebook_icon.svg" alt="Facebook">Facebook</a>
                 <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="./img/instagram_icon.svg" alt="Instagram"> Instagram</a>
@@ -39,9 +39,9 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Socios estratégicos <br> de nuestros clientes</h1>
-            <p>Mejoramos la experiencia de compra de tus clientes <br> con entregas seguras, rápidas y efectivas.</p>
-            <a href="./contacto.html" class="cta-button">Escribinos</a>
+            <h1 id="heading"></h1>
+        <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
+        <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>
         </div>        
         <img src="./branding/fastmail2.png" class="logo">
         <!--<img src="./img/logobg.png" class="logo logobg"> -->
@@ -49,10 +49,40 @@
         <img src="./branding/correoprivado2.png" class="logo logosecondary">
         <img src="./branding/gionred.png" class="logo logobg2">
         <img src="./branding/guionblack.png" class="logo logobg3">
+        <p>Mejoramos la experiencia de compra de tus clientes <br>con entregas seguras, rápidas y efectivas.</p>
 
-
+        <script>
+            const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
+            let headingIndex = 0;
+    
+            function typeHeading() {
+                if (headingIndex < headingText.length) {
+                    // Handle line breaks
+                    if (headingText.charAt(headingIndex) === '\n') {
+                        document.getElementById("heading").innerHTML += "<br>"; // Add a <br> for line breaks
+                    } else {
+                        document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
+                    }
+                    headingIndex++;
+                    setTimeout(typeHeading, 100); // Adjust the speed here
+                } else {
+                    fadeInElements(); // Fade in the paragraph and button after heading is done
+            }
+                
+            }
+    
+            function fadeInElements() {
+            const paragraph = document.getElementById("paragraph");
+            const ctaButton = document.getElementById("cta-button");
+            paragraph.classList.add("visible"); // Add class to make paragraph visible
+            ctaButton.classList.add("visible"); // Add class to make button visible
+        }
+    
+            typeHeading(); // Start the typing effect
+        </script>
 
     </section>
+
     
     <div class="content">
         <h2 style="text-align: center;">Nuestros Servicios</h2></div>
