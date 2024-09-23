@@ -10,6 +10,7 @@
    </head>
 
     <body>
+
     <header class="header" id="header">
         <div class="top-section">
             <div class="logo">
@@ -36,101 +37,104 @@
             </nav>
         </div>
     </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1 id="heading"></h1>
-        <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
-        <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>
-        </div>        
-        <img src="./branding/fastmail2.png" class="logo">
-        <!--<img src="./img/logobg.png" class="logo logobg"> -->
-        <img src="./branding/guion.png" class="logo logobg">
-        <img src="./branding/correoprivado2.png" class="logo logosecondary">
-        <img src="./branding/gionred.png" class="logo logobg2">
-        <img src="./branding/guionblack.png" class="logo logobg3">
-        <p>Mejoramos la experiencia de compra de tus clientes <br>con entregas seguras, rápidas y efectivas.</p>
-
-        <script>
-            const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
-            let headingIndex = 0;
-    
-            function typeHeading() {
-                if (headingIndex < headingText.length) {
-                    // Handle line breaks
-                    if (headingText.charAt(headingIndex) === '\n') {
-                        document.getElementById("heading").innerHTML += "<br>"; // Add a <br> for line breaks
-                    } else {
-                        document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
-                    }
-                    headingIndex++;
-                    setTimeout(typeHeading, 100);
-                } else {
-                    fadeInElements(); // 
-            }
-                
-            }
-    
-            function fadeInElements() {
-            const paragraph = document.getElementById("paragraph");
-            const ctaButton = document.getElementById("cta-button");
-            paragraph.classList.add("visible"); 
-            ctaButton.classList.add("visible"); 
-        }
-    
-            typeHeading();
-        </script>
-
-    </section>
-
-    
-    <div class="content" style="text-align: center;">
-        <h2 id="h2Servicios">Nuestros Servicios</h2></div>
-    <section class="content">
-        
-        <div>
-            <img src="./branding/partedetuexito.png" width="100%">
-        </div>
-        
-        <div class="feature">
-            <h3>¿Dónde está mi pedido?</h3>
-            <p>Para conocer el estado de envío de tu paquete, y realizar su seguimiento, ingresá a este botón.</p>
-            <a href="https://epresislv.fastmail.com.ar/seguimiento">
-                <button>Seguí tu envío online</button>
-            </a>
-        </div>
-        <div class="feature">
-            <h3>FAST MAIL E-commerce</h3>
-            <p>Para conocer el estado de envío de tus productos, y realizar su seguimiento, ingresá a este botón.</p>
-            <a href="https://epresislv.fastmail.com.ar/login">
-            <button>Ingresar</button>
-            </a>
-        </div>
-        <div class="feature">
-            <h3>FAST MAIL Postal</h3>
-            <p>Acá podrás realizar el seguimiento del telegrama, carta notificada o acuse de recibo que enviaste.</p>
-            <a href="https://trackerfm.fastmail.com.ar/">
-            <button>Ingresar</button>
-            </a>
-            
-        </div>
-        <div class="animation-container">
-            <div id="animation2" class="animation">
-                <img class="image-bottom-right" src="./boxes/boxes.png">
-                <img class="caja caja-1" src="./boxes/caja4.png"> 
-                <img class="caja caja-2" src="./boxes/caja2.png">    
-                <img class="caja caja-3" src="./boxes/caja1.png">               
+    <div class="container">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1 id="heading"></h1>
+                    <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
+                    <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>
+                    <img src="./branding/fastmail2.png" class="logo">
+            <!--<img src="./img/logobg.png" class="logo logobg"> -->
+            <img src="./branding/guion.png" class="logo logobg">
+            <img src="./branding/correoprivado2.png" class="logo logosecondary">
+            <img src="./branding/gionred.png" class="logo logobg2">
+            <img src="./branding/guionblack.png" class="logo logobg3">
             </div>
-        </div>
+
+
+                <div class="hero-image">
+                    <img src="./branding/anim8.png" alt="Descriptive alt text">
+                </div>
+            </div>
         
-    </section>
+            <script>
+                const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
+                let headingIndex = 0;
+        
+                function typeHeading() {
+                    if (headingIndex < headingText.length) {
+                        if (headingText.charAt(headingIndex) === '\n') {
+                            document.getElementById("heading").innerHTML += "<br>";
+                        } else {
+                            document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
+                        }
+                        headingIndex++;
+                        setTimeout(typeHeading, 100);
+                    } else {
+                        fadeInElements();
+                    }
+                }
+        
+                function fadeInElements() {
+                    const paragraph = document.getElementById("paragraph");
+                    const ctaButton = document.getElementById("cta-button");
+                    paragraph.classList.add("visible"); 
+                    ctaButton.classList.add("visible"); 
+                }
+        
+                typeHeading();
+            </script>
+        </section>
 
     
+    
+        <section class="content">
+            <div>
+                <h2 id="h2Servicios">Nuestros Servicios</h2>
+            </div>
+            <div>
+                <img src="./branding/partedetuexito.png" width="100%">
+            </div>
+            
+            <div class="feature">
+                <h3>¿Dónde está mi pedido?</h3>
+                <p>Para conocer el estado de envío de tu paquete, y realizar su seguimiento, ingresá a este botón.</p>
+                <a href="https://epresislv.fastmail.com.ar/seguimiento">
+                    <button>Seguí tu envío online</button>
+                </a>
+            </div>
+            <div class="feature">
+                <h3>FAST MAIL E-commerce</h3>
+                <p>Para conocer el estado de envío de tus productos, y realizar su seguimiento, ingresá a este botón.</p>
+                <a href="https://epresislv.fastmail.com.ar/login">
+                <button>Ingresar</button>
+                </a>
+            </div>
+            <div class="feature">
+                <h3>FAST MAIL Postal</h3>
+                <p>Acá podrás realizar el seguimiento del telegrama, carta notificada o acuse de recibo que enviaste.</p>
+                <a href="https://trackerfm.fastmail.com.ar/">
+                <button>Ingresar</button>
+                </a>
+                
+            </div>
+            <div class="animation-container">
+                <div id="animation2" class="animation">
+                    <img class="image-bottom-right" src="./boxes/boxes.png">
+                    <img class="caja caja-1" src="./boxes/caja4.png"> 
+                    <img class="caja caja-2" src="./boxes/caja2.png">    
+                    <img class="caja caja-3" src="./boxes/caja1.png">               
+                </div>
+            </div>
+            
+        </section>  
 
-    <footer class="footer">
-        <a href="./politica-de-privacidad.html">Política de Privacidad</a>
-        <a href="./contacto.html">Contáctanos</a>
-        <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
-    </footer>
+        <footer class="footer">
+            <a href="./politica-de-privacidad.html">Política de Privacidad</a>
+            <a href="./contacto.html">Contáctanos</a>
+            <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+        </footer>
+    </div>
 </body>
 </html>

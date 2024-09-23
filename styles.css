@@ -24,9 +24,12 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
-    background-color: #d9cdcd;
 }
-
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes full height */
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -132,22 +135,70 @@ body {
 
 /* Hero section styles */
 .hero {
-    position: relative;
-    background-image: url(./branding/header1.png);
-    background-size: cover;
-    height: 90vh;
-    color: #fff; /* Ensure text is visible on background */
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.hero-container {
+    display: flex;
+    width: 100%;
+}
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Adjust padding as needed */
 }
 .hero-text{
     margin-top: 20vh;
-    display: flex;
-    flex-direction: column;
     font-size: 1.5em; 
-    margin-left: 2vw;
-    width: 60%;
     color:black;
+}
 
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    margin-top: 15vh;
+    margin-left:10vh;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column; 
+    }
+    .hero-image{
+        margin-top: 0;
+    }
+    
+    /* Optional: Add margin to the content section */
+    .content {
+        margin-top: 75vh;
+        flex-direction: column;
+        flex: 1; /* This will push the footer to the bottom */
+        padding: 20px; /* Optional padding for content */
+        position: relative; /* Set to relative for absolute children */
+    }
+    .hero .logobg{
+        top:27vh;
+    }
+    .hero .logo{
+        width:50vh;
+    }
+    .hero .logosecondary{
+        width:50vh;
+    }
+
+    @keyframes fadeInAndSlideIn2 {
+        to {
+            opacity: .8;
+            transform: translateX(43vh);
+        }
+    }
 }
 .hero h1 {
     font-size: 5vh;
@@ -287,9 +338,10 @@ body {
     display: flex;
     padding: 20px;
     width:95%;
-    margin: 0 auto;
     align-items: center;
+    position: relative; /* Set to relative for absolute children */    
 }
+
 
 #h2Servicios {
     display: block;
@@ -338,12 +390,10 @@ button:hover {
 
 .animation-container{
     width: 100%;
-    position: absolute;
-    right: 0;
-    height: 300px;
-    bottom: -812px;
-    z-index: 0;
+    height: 300px; /* Adjust height as needed */
+    z-index: 100;
     pointer-events: none;
+    margin-top: 20px; /* Space above the footer */
 }
 
 /* Footer styles */
