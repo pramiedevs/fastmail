@@ -1,6 +1,10 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --main-color: #cd2318;
-    --secondary-color: #aca5a5;
+    --secondary-color: #222020;
     --cta-color: #666666;
     --hover-color: linear-gradient(to right, #cd2318, #e63030, #f08b49, #9c1d1d);
     --bg-color: #d8dacf;
@@ -77,7 +81,7 @@ body {
 }
 .social{
     display: flex;
-    gap: .5vh;
+    gap: 1vh;
     
 }
 .social a {
@@ -87,9 +91,73 @@ body {
     color:white;
     font-size: 2vh;
 }
+@media (min-width:768px){
+    .header nav a{
+        color:white;
+    }
+    .hero {
+        display: flex; /* Use Flexbox to split the screen */
+        height: 100vh; /* Make the hero section full height */
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: 1; /* Each section takes up half the space */
+        display: flex; /* Allow for flex properties */
+        justify-content: center; /* Center contents horizontally */
+        align-items: center; /* Center contents vertically */
+        text-align: center; /* Center text */
+    }
+
+    .hero-right {
+        background-color: #f0f0f0; /* Optional: add a background color */
+    }
+
+    .animated-logo {
+        display: flex;
+        justify-content: center; /* Center logos horizontally */
+        flex-wrap: wrap; /* Allow logos to wrap */
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column; /* Stack text elements vertically */
+        justify-content: center; /* Center text vertically */
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column; /* Stack the text and button vertically */
+        align-items: center; /* Center text and button horizontally */
+        margin: 20px; /* Add margin for spacing */
+        text-align: center; /* Center text */
+    }
+    .bottom-section {
+        display: flex; /* Hide bottom section on mobile */
+    }
+    .hero-image {
+
+        max-width: 700px; /* Ensure the image doesn't exceed the container */
+        max-height: 90%; /* Limit the height of the image */
+        object-fit: contain; /* Scale the image to maintain aspect ratio */
+    }
+
+    .animated-logo {
+        display: flex;
+        justify-content: center; /* Center logos horizontally */
+        flex-wrap: wrap; /* Allow logos to wrap */
+    }
+
+}
 @media (max-width: 768px) {
-    .header{
-        width: 72%;
+
+    .header {
+        background: var(--main-color);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        height: 20vh; /* Adjusted height for a more compact look */
     }
     .top-section {
         flex-direction: row; /* Keep top-section in a row */
@@ -109,8 +177,10 @@ body {
     }
 
     .hamburger {
+        background-color: var(--secondary-color);
         display: block; /* Show hamburger icon */
         cursor: pointer;
+        height: 5vh;
     }
 
     .mobile-menu {
@@ -123,24 +193,30 @@ body {
     }
 
     .mobile-menu.active {
-        display: block; /* Show mobile menu when active */
-        margin-top: 12vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 18vh;
+
+    }
+    .header .nav a{
+        color:black;
     }
 
     .mobile-social a,
     .mobile-menu nav a {
-        display: block; /* Stack links vertically */
+        display: flex; /* Stack links vertically */
+        flex-direction: column;
         padding: 10px; /* Space between links */
+        color: black;
     }
 }
 
 .header .access a {
-    margin-right: 20px;
     background:linear-gradient(to right, #cd2318, #dfa888, #f0deca);
     border: 2px solid var(--main-color);
     color: #fff;
     text-decoration: none;
-    padding: 12px 12px;
+    padding: 8px;
     font-size: 2vh;
     font-weight: 500;
     border-radius: 10px;
@@ -155,7 +231,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
     border-bottom: solid white 2px;
 }
 .access {
@@ -165,14 +240,12 @@ body {
 
 .header .bottom-section {
     background-color: var(--secondary-color);
-    height: 40%;
 }
 
 .header .social img {
     height: 20px;
     width: 20px;
-    margin: 0 5px;
-    padding-left: 10px;
+    margin: 0 10px;
 }
 
 .header nav {
@@ -183,7 +256,6 @@ body {
 }
 
 .header nav a {
-    color: #fff;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -197,13 +269,10 @@ body {
 }
 
 /* Hero section styles */
-.hero {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
 .hero-container {
     display: flex;
+    justify-content: center; /* Center both text and image */
+    align-items: center; /* Center items vertically */
     width: 100%;
 }
 .hero-text {
@@ -217,15 +286,12 @@ body {
     margin-top: 20vh;
     font-size: 1.5em; 
     color:black;
+    text-align: center;
+    align-items: center;
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
     margin-top: 15vh;
-    margin-left:10vh;
 }
 
 
@@ -249,7 +315,6 @@ body {
     text-align: center;
     width:300px;
     margin-top: 5vh;
-    margin-left: 16vh;
     display: inline-block;
     background-color: var(--main-color);
     color: #dbdada;
@@ -275,7 +340,7 @@ body {
 .hero .logo {
     top:25vh;
     left: 0;    
-    margin-right: 8vw;
+    margin-left: 8vh;
     width: 90vh;
     opacity: 0; /* Initially hidden */
     animation: fadeInAndSlideIn 3s forwards;
@@ -323,6 +388,24 @@ body {
     animation-delay: 3s; /* Fade in and slide in after 2 seconds */
     z-index: 1;
 }
+.exito {
+    margin-left: 20px;
+    width: 200%; /* Adjust to your desired width */
+    height: 60vh; /* Show only 60% of the image height; adjust as needed */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Required for absolute positioning */
+}
+
+.clipped-image {
+    position: absolute; /* Position it absolutely within the container */
+    top: 50%; /* Center it vertically */
+    left: 98%; /* Center it horizontally */
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Full height of the container */
+    transform: translate(-50%, -50%); /* Center the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
 
 @keyframes fadeIn {
     to {
@@ -370,10 +453,10 @@ body {
 /* Content section styles */
 .content {
     display: flex;
-    padding: 20px;
-    width:95%;
+    padding: 20px 0 20px 0;
     align-items: center;
-    position: relative; /* Set to relative for absolute children */    
+    position: relative; /* Set to relative for absolute children */
+    gap:20px;    
 }
 
 
@@ -455,6 +538,9 @@ button:hover {
 }
 /* Media query for mobile */
 @media (max-width: 768px) {
+    .hero h1{
+        margin-top:16vh;
+    }
 
     .hero-container {
         flex-direction: column; 
@@ -463,11 +549,13 @@ button:hover {
         margin-top: 0;
     }
     .hero .logo{
-        width: 60vh;
+        width: 40vh;
+        margin-left:2vh;
     }
     .hero .logobg{
-        width: 10vh;
-        top:27vh;
+        width: 6vh;
+        top: 26vh;
+        margin-left: -14vh;
 
     }
     .hero .logobg2{
@@ -482,16 +570,27 @@ button:hover {
     
     /* Optional: Add margin to the content section */
     .content {
-        margin-top: 75vh;
         flex-direction: column;
         flex: 1; /* This will push the footer to the bottom */
         padding: 20px; /* Optional padding for content */
         position: relative; /* Set to relative for absolute children */
     }
+
+    .header .top-section{
+        flex-direction: column;
+        padding:20px;
+    }
+    .header .access{
+        flex-direction: row;
+    }
     .header .access a{
-        margin-left: -20px;
+        margin-left: 10px;
         width: 150px;
     }
+    .header .logo img{
+        margin-bottom: 20px;
+    }
+
     @keyframes fadeInAndSlideIn2 {
         to {
             opacity: .8;
@@ -505,7 +604,7 @@ button:hover {
         }
         to {
             opacity: 0;
-            transform: translateX(70vh); /* Slide to 43vh */
+            transform: translateX(23vh); /* Slide to 43vh */
         }
     }
 }
