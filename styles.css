@@ -6,7 +6,7 @@
     --main-color: #cd2318;
     --secondary-color: #222020;
     --cta-color: #666666;
-    --hover-color: linear-gradient(to right, #cd2318, #e63030, #f08b49, #9c1d1d);
+    --hover-color: linear-gradient(to right, #2e0704, #ff0000, #f74949);
     --bg-color: #d8dacf;
     --bd-color-dark:#4B4B4D;
 }
@@ -48,7 +48,7 @@ body {
 }
 /* Header styles */
 .header {
-    background: var(--main-color);
+    background-color: var(--main-color);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,7 @@ body {
         background-color: var(--secondary-color);
         display: block; /* Show hamburger icon */
         cursor: pointer;
-        height: 5vh;
+        padding-bottom: 20px;
     }
 
     .mobile-menu {
@@ -196,6 +196,7 @@ body {
         display: flex;
         flex-direction: column;
         margin-top: 18vh;
+        height:14vh;
 
     }
     .header .nav a{
@@ -209,22 +210,28 @@ body {
         padding: 10px; /* Space between links */
         color: black;
     }
+    .mobile-social{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .header .access a {
     background:linear-gradient(to right, #cd2318, #dfa888, #f0deca);
-    border: 2px solid var(--main-color);
     color: #fff;
     text-decoration: none;
     padding: 8px;
+    width:200px;
     font-size: 2vh;
     font-weight: 500;
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 5px;
 }
 
 .header .access a:hover {
-    border:solid white 1.9px;
+    border-left: solid rgb(32, 32, 32) 40px;
+
 }
 
 .header .top-section {
@@ -328,7 +335,7 @@ body {
 
 .hero .cta-button:hover {
     background-color: var(--hover-color); /* Button color on hover */
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
 .hero .world, .hero .logo {
@@ -462,7 +469,6 @@ body {
 
 #h2Servicios {
     display: block;
-    margin: 0;
     font-size: 5vh;
     text-align: center;
     color: var(--main-color);
@@ -501,7 +507,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--hover-color);
+    background-color: var(--secondary-color);
 }
 
 

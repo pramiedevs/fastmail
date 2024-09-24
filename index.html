@@ -78,8 +78,27 @@
             </div>
             <div class="hero-right">
                 <div class="hero-image">
-                    <img src="./branding/anim8.png" alt="Descriptive alt text">
+                    <img id="heroImage" src="./branding/anim3.png" alt="Descriptive alt text">
                 </div>
+                <script>
+                    // Array of image sources
+                    const images = [
+                        './branding/anim3.png',
+                        './branding/anim2.png',
+                        './branding/anim8.png'
+                    ];
+                
+                    let currentIndex = 0;
+                
+                    // Function to change the image
+                    function changeImage() {
+                        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+                        document.getElementById('heroImage').src = images[currentIndex];
+                    }
+                
+                    // Change image every 6 seconds
+                    setInterval(changeImage, 6000);
+                </script>
             </div>              
         </div>
         
