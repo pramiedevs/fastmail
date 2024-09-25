@@ -116,10 +116,54 @@
                     }
             
                     typeHeading();
+
+                    const button = document.querySelector('.cta-button');
+                    const heading = document.getElementById('heading');
+
+                    button.addEventListener('mouseenter', () => {
+                        heading.style.color = 'var(--main-color)'; // Change to desired color
+                    });
+
+                    button.addEventListener('mouseleave', () => {
+                        heading.style.color = 'var(--secondary-color)'; // Reset to original color
+                    });
+
                 </script>
         </section>
-        <section id="b-section" class="main-section">
-            hello world
+        <section id="b-section" class="b-section">
+            <h1 class="b-heading" >Nuestros Servicios</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="your-image-url.jpg" alt="Image Description" />
+                        <p>Front Text Here</p>
+                    </div>
+                    <div class="card-back">
+                        <p>More Text Here</p>
+                        <button class="cta-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <img src="your-image-url.jpg" alt="Image Description" />
+                        <p>Front Text Here</p>
+                    </div>
+                    <div class="card-back">
+                        <p>More Text Here</p>
+                        <button class="cta-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <img src="your-image-url.jpg" alt="Image Description" />
+                        <p>Front Text Here</p>
+                    </div>
+                    <div class="card-back">
+                        <p>More Text Here</p>
+                        <button class="cta-button">Learn More</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>   
     <script>
