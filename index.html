@@ -139,10 +139,10 @@
                         <h3>¿Dónde está mi pedido?</h3> 
                         <img src="./branding/anim2.png" alt="Image Description" />
                     </div>
-                    <div class="card-back">
+                    <div class="card-back" id="dorso1">
                         <p>Para conocer el estado de envío de tu paquete, y realizar su seguimiento, ingresá a este botón.</p>
                         <a href="https://epresislv.fastmail.com.ar/seguimiento">
-                            <button class="cta-button visible">Seguí tu envío online</button>
+                            <button class="cta-button2 visible cta1">Seguí tu envío online</button>
                         </a>
                     </div>
                 </div>
@@ -151,10 +151,10 @@
                         <h3>FAST MAIL E-commerce</h3>
                         <img src="./branding/anim2.png" alt="Image Description" />
                     </div>
-                    <div class="card-back">
+                    <div class="card-back" id="dorso2">
                         <p>Para conocer el estado de envío de tus productos, y realizar su seguimiento, ingresá a este botón.</p>
                         <a href="https://epresislv.fastmail.com.ar/login">
-                            <button class="cta-button visible">Ingreso <br> E-commerce</button>
+                            <button class="cta-button2 visible cta2">Ingreso <br> E-commerce</button>
                         </a>
                     </div>
                 </div>
@@ -163,13 +163,51 @@
                         <h3>FAST MAIL Postal</h3>
                         <img src="./branding/anim2.png" alt="Image Description" />
                     </div>
-                    <div class="card-back">
+                    <div class="card-back" id="dorso3">
                         <p>Acá podrás realizar el seguimiento del telegrama, carta notificada o acuse de recibo que enviaste.</p>
                         <a href="https://trackerfm.fastmail.com.ar/">
-                            <button class="cta-button visible">Ingreso Postal</button>
+                            <button class="cta-button2 visible cta3">Ingreso Postal</button>
                         </a>
                     </div>
                 </div>
+                <script>
+                    const cta1 = document.querySelector('.cta1');
+                    const cta2 = document.querySelector('.cta2');
+                    const cta3 = document.querySelector('.cta3');
+                    const cardbg1 = document.getElementById('dorso1');
+                    const cardbg2 = document.getElementById('dorso2');
+                    const cardbg3 = document.getElementById('dorso3');
+                    
+                    cta1.addEventListener('mouseenter', () => {
+                        cardbg1.style.backgroundColor = 'red'; // Change to desired color
+
+                        cta1.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta1.addEventListener('mouseleave', () => {
+                        cardbg1.style.backgroundColor = ''; // Reset to original color
+                        cta1.style.color = ''; // Reset text color if needed
+                    });
+                    cta2.addEventListener('mouseenter', () => {
+                        cardbg2.style.backgroundColor = 'red'; // Change to desired color
+
+                        cta2.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta2.addEventListener('mouseleave', () => {
+                        cardbg2.style.backgroundColor = ''; // Reset to original color
+                        cta2.style.color = ''; // Reset text color if needed
+                    });
+                    cta3.addEventListener('mouseenter', () => {
+                        cardbg3.style.backgroundColor = 'red'; // Change to desired color
+                        cta3.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta3.addEventListener('mouseleave', () => {
+                        cardbg3.style.backgroundColor = ''; // Reset to original color
+                        cta3.style.color = ''; // Reset text color if needed
+                    });
+                </script>
             </div>
             <!---
             <div class="feature">
@@ -210,184 +248,5 @@
 
     <script src="script.js" defer></script>
     
-</body>
-</html>
-
-
-
-
-
-
-
-        <!--
-        <header class="header" id="header">
-            <div class="top-section">
-                <div class="access">
-                    <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
-                    <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
-                </div>
-                <div class="logo">
-                    <a href="./index.html">
-                        <img src="./branding/whitelogo.png" alt="Logo">
-                    </a>                
-                </div>
-            </div>
-            <div class="bottom-section uppercase">
-                <div class="social">
-                    <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="./img/facebook_icon.svg" alt="Facebook">Facebook</a>
-                    <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="./img/instagram_icon.svg" alt="Instagram"> Instagram</a>
-                    <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="./img/linkedin_icon.png" alt="Linkedin">LinkedIn</a>
-                </div>
-                <nav>
-                    <a href="./sobre-nosotros.html">Quienes somos</a>
-                    <a href="./servicios.html">Servicios</a>
-                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
-                </nav>
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            <div class="mobile-menu" id="mobileMenu">
-                <div class="mobile-social">
-                    <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/fastmailenvios" target="_blank">Instagram</a>
-                    <a href="https://www.linkedin.com/company/fastmailenvios/">LinkedIn</a>
-                </div>
-                <nav>
-                    <a href="./sobre-nosotros.html">Quienes somos</a>
-                    <a href="./servicios.html">Servicios</a>
-                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
-                </nav>
-            </div>
-        </header>
-        <script>
-            function toggleMenu() {
-                const mobileMenu = document.getElementById("mobileMenu");
-                mobileMenu.classList.toggle("active"); // Toggle active class
-            }
-        </script>
-        
-    <div class="container">
-        <section class="hero">
-            <div class="hero-left">
-                <div class="animated-logo">
-                    <img src="./branding/fastmail2.png" class="logo">
-                    <img src="./img/logobg.png" class="logo logobg">
-                    <img src="./branding/guion.png" class="logo logobg">
-                    <img src="./branding/correoprivado2.png" class="logo logosecondary">
-                    <img src="./branding/gionred.png" class="logo logobg2">
-                    <img src="./branding/guionblack.png" class="logo logobg3">
-                </div>
-                <div class="hero-container">
-                    <div class="hero-text">
-                        <h1 id="heading"></h1>
-                        <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
-                        <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>                    
-                </div>
-            </div>
-            <div class="hero-right">
-                <div class="hero-image">
-                    <img id="heroImage" src="./branding/anim3.png" alt="Descriptive alt text">
-                </div>
-                <script>
-                    // Array of image sources
-                    const images = [
-                        './branding/anim3.png',
-                        './branding/anim2.png',
-                        './branding/anim8.png'
-                    ];
-                
-                    let currentIndex = 0;
-                
-                    // Function to change the image
-                    function changeImage() {
-                        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-                        document.getElementById('heroImage').src = images[currentIndex];
-                    }
-                
-                    // Change image every 6 seconds
-                    setInterval(changeImage, 6000);
-                </script>
-            </div>              
-        </div>
-        
-            <script>
-                const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
-                let headingIndex = 0;
-        
-                function typeHeading() {
-                    if (headingIndex < headingText.length) {
-                        if (headingText.charAt(headingIndex) === '\n') {
-                            document.getElementById("heading").innerHTML += "<br>";
-                        } else {
-                            document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
-                        }
-                        headingIndex++;
-                        setTimeout(typeHeading, 100);
-                    } else {
-                        fadeInElements();
-                    }
-                }
-        
-                function fadeInElements() {
-                    const paragraph = document.getElementById("paragraph");
-                    const ctaButton = document.getElementById("cta-button");
-                    paragraph.classList.add("visible"); 
-                    ctaButton.classList.add("visible"); 
-                }
-        
-                typeHeading();
-            </script>
-        </section>
-
-        <div>
-            <h2 id="h2Servicios">Nuestros Servicios</h2>
-        </div>
-    
-        <section class="content">
-            
-            <div class="exito">
-                <img class="clipped-image" src="./branding/partedetuexito.png" width="100%">
-            </div>
-            
-            <div class="feature">
-                <h3>¿Dónde está mi pedido?</h3>
-                <p>Para conocer el estado de envío de tu paquete, y realizar su seguimiento, ingresá a este botón.</p>
-                <a href="https://epresislv.fastmail.com.ar/seguimiento">
-                    <button>Seguí tu envío online</button>
-                </a>
-            </div>
-            <div class="feature">
-                <h3>FAST MAIL E-commerce</h3>
-                <p>Para conocer el estado de envío de tus productos, y realizar su seguimiento, ingresá a este botón.</p>
-                <a href="https://epresislv.fastmail.com.ar/login">
-                <button>Ingresar</button>
-                </a>
-            </div>
-            <div class="feature">
-                <h3>FAST MAIL Postal</h3>
-                <p>Acá podrás realizar el seguimiento del telegrama, carta notificada o acuse de recibo que enviaste.</p>
-                <a href="https://trackerfm.fastmail.com.ar/">
-                <button>Ingresar</button>
-                </a>
-                
-            </div>
-            <div class="animation-container">
-                <div id="animation2" class="animation">
-                    <img class="image-bottom-right" src="./boxes/boxes.png">
-                    <img class="caja caja-1" src="./boxes/caja4.png"> 
-                    <img class="caja caja-2" src="./boxes/caja2.png">    
-                    <img class="caja caja-3" src="./boxes/caja1.png">               
-                </div>
-            </div>
-            
-        </section>  
-
-        <footer class="footer">
-            <a href="./politica-de-privacidad.html">Política de Privacidad</a>
-            <a href="./contacto.html">Contáctanos</a>
-            <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
-        </footer>
-    </div> -->
 </body>
 </html>
