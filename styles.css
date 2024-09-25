@@ -28,589 +28,151 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
+    background-color: #f8f9fa;
 }
-.access {
-    order:1;
+header {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+}
+.header-container {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    order: 2;
+    display: flex; /* Make the logo container a flex container */
+    align-items: center; /* Align items vertically centered */
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes full height */
+.logo img{
+    width: 200px;
 }
-.uppercase {
-    text-transform: uppercase;
-}
-/* Header styles */
-.header {
-    background-color: var(--main-color);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    height: 20vh; /* Adjusted height for a more compact look */
-}
-.mobile-menu {
-    display: none; /* Hide mobile menu by default */
-    background: #fff; /* Background color */
-    position: absolute; /* Positioning */
-    top: 60px; /* Adjust to position below header */
-    width: 100%; /* Full width */
-    z-index: 10; /* Ensure it appears above other content */
+.social {
+    display: flex; /* Make social icons container a flex container */
+    margin-left: 15px; /* Add some space between logo and icons */
 }
 
-
-.header .top-section,
-.header .bottom-section {
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Reduced padding for a more compact header */
-}
-
-.header .logo img{
-    width:30vh;
-}
-.social{
-    display: flex;
-    gap: 1vh;
-    
-}
 .social a {
+    margin-left: 10px; /* Space between social icons */
+    color: white; /* Change color if needed */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social img {
+    width: 20px; /* Set size for social icons */
+    height: 20px; /* Set size for social icons */
+    vertical-align: middle; /* Align images properly */
+    background-color: white;
+}
+
+.nav {
     display: flex;
-    align-items: center; /* Centers items vertically */
-    text-decoration: none; /* Optional: Remove underline from links */
-    color:white;
-    font-size: 2vh;
+    align-items: center;
 }
-@media (min-width:768px){
-    .header nav a{
-        color:white;
-    }
-    .hero {
-        display: flex; /* Use Flexbox to split the screen */
-        height: 100vh; /* Make the hero section full height */
-    }
 
-    .hero-left,
-    .hero-right {
-        flex: 1; /* Each section takes up half the space */
-        display: flex; /* Allow for flex properties */
-        justify-content: center; /* Center contents horizontally */
-        align-items: center; /* Center contents vertically */
-        text-align: center; /* Center text */
-    }
-
-    .hero-right {
-        background-color: #f0f0f0; /* Optional: add a background color */
-    }
-
-    .animated-logo {
-        display: flex;
-        justify-content: center; /* Center logos horizontally */
-        flex-wrap: wrap; /* Allow logos to wrap */
-    }
-
-    .hero-container {
-        display: flex;
-        flex-direction: column; /* Stack text elements vertically */
-        justify-content: center; /* Center text vertically */
-    }
-
-    .hero-text {
-        display: flex;
-        flex-direction: column; /* Stack the text and button vertically */
-        align-items: center; /* Center text and button horizontally */
-        margin: 20px; /* Add margin for spacing */
-        text-align: center; /* Center text */
-    }
-    .bottom-section {
-        display: flex; /* Hide bottom section on mobile */
-    }
-    .hero-image {
-
-        max-width: 700px; /* Ensure the image doesn't exceed the container */
-        max-height: 90%; /* Limit the height of the image */
-        object-fit: contain; /* Scale the image to maintain aspect ratio */
-    }
-
-    .animated-logo {
-        display: flex;
-        justify-content: center; /* Center logos horizontally */
-        flex-wrap: wrap; /* Allow logos to wrap */
-    }
-
+.nav-links {
+    display: flex;
 }
+
+.nav-links a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover {
+    color: black; /* Change color on hover */
+}
+#accessButton {
+    margin-left: 20px;
+}
+
+#toggleButtons {
+    align-items: center;
+    margin-left: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.another-button {
+    display: flex;
+    background-color: #b1b3b6;
+    border: none;
+    color: white;
+    margin:5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.hamburger {    
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media(min-width: 768px){
+    .drawer-content{
+        display:none;
+    }
+}
+
+/* Media query for mobile devices */
 @media (max-width: 768px) {
-
-    .header {
-        background: var(--main-color);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        height: 20vh; /* Adjusted height for a more compact look */
-    }
-    .top-section {
-        flex-direction: row; /* Keep top-section in a row */
+    .nav {
+        display: none; /* Hide nav by default on mobile */
     }
 
-    .access {
-        order: 2; /* Move access links to the left */
-    }
-
-    .logo {
-        order: 1; /* Move logo to the right */
-        text-align: right; /* Align logo right */
-    }
-
-    .bottom-section {
-        display: none; /* Hide bottom section on mobile */
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        display: none; /* Hidden by default */
     }
 
     .hamburger {
-        background-color: var(--secondary-color);
-        display: block; /* Show hamburger icon */
-        cursor: pointer;
-        padding-bottom: 20px;
-    }
-
-    .mobile-menu {
-        display: none; /* Hide mobile menu by default */
-        background: #fff; /* Background color */
-        position: absolute; /* Positioning */
-        top: 60px; /* Adjust to position below header */
-        width: 100%; /* Full width */
-        z-index: 10; /* Ensure it appears above other content */
-    }
-
-    .mobile-menu.active {
-        display: flex;
-        flex-direction: column;
-        margin-top: 18vh;
-        height:14vh;
-
-    }
-    .header .nav a{
-        color:black;
-    }
-
-    .mobile-social a,
-    .mobile-menu nav a {
-        display: flex; /* Stack links vertically */
-        flex-direction: column;
-        padding: 10px; /* Space between links */
-        color: black;
-    }
-    .mobile-social{
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-.header .access a {
-    background:linear-gradient(to right, #cd2318, #dfa888, #f0deca);
-    color: #fff;
-    text-decoration: none;
-    padding: 8px;
-    width:200px;
-    font-size: 2vh;
-    font-weight: 500;
-    border-radius: 10px;
-    transition: background-color 0.3s, border-color 0.3s;
-    margin-bottom: 5px;
-}
-
-.header .access a:hover {
-    border-left: solid rgb(32, 32, 32) 40px;
-
-}
-
-.header .top-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid white 2px;
-}
-.access {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-}
-
-.header .bottom-section {
-    background-color: var(--secondary-color);
-}
-
-.header .social img {
-    height: 20px;
-    width: 20px;
-    margin: 0 10px;
-}
-
-.header nav {
-    display: flex;
-    gap: 10px; 
-    color: #fff;
-    font-size: 2vh;
-}
-
-.header nav a {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    padding:10px;
-}
-
-.header nav a:hover {
-    background: white;
-    color: var(--main-color);
-}
-
-/* Hero section styles */
-.hero-container {
-    display: flex;
-    justify-content: center; /* Center both text and image */
-    align-items: center; /* Center items vertically */
-    width: 100%;
-}
-.hero-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    padding: 20px; /* Adjust padding as needed */
-}
-.hero-text{
-    margin-top: 20vh;
-    font-size: 1.5em; 
-    color:black;
-    text-align: center;
-    align-items: center;
-}
-
-.hero-image {
-    margin-top: 15vh;
-}
-
-
-.hero h1 {
-    font-size: 5vh;
-    margin-top: 25vh;
-    color:var(--main-color);
-}
-
-.hero p {
-    font-size: 3vh;
-    margin-top:1vh;
-    opacity: 0; /* Start hidden */
-    transition: opacity 1s ease; /* Fade effect */
-}
-.hero-text p.visible, .hero-text .cta-button.visible {
-    opacity: 1; /* Fully visible when this class is added */
-}
-
-.hero .cta-button {
-    text-align: center;
-    width:300px;
-    margin-top: 5vh;
-    display: inline-block;
-    background-color: var(--main-color);
-    color: #dbdada;
-    text-decoration: none;
-    letter-spacing: -.4px;
-    border-radius: 6px 6px 6px 6px;
-    padding: 14px 22px 14px 22px;
-    opacity: 0; /* Start hidden */
-    transition: opacity 1s ease; /* Fade effect */
-}
-
-.hero .cta-button:hover {
-    background-color: var(--hover-color); /* Button color on hover */
-    transform:scale(1.08);
-}
-
-.hero .world, .hero .logo {
-    position: absolute;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-
-.hero .logo {
-    top:25vh;
-    left: 0;    
-    margin-left: 8vh;
-    width: 90vh;
-    opacity: 0; /* Initially hidden */
-    animation: fadeInAndSlideIn 3s forwards;
-    animation-delay: 2s; /* Fade in and slide in after 2 seconds */
-    z-index: 2;
-}
-.logo{
-    margin-left: 4vh;
-}
-.hero .logobg{    
-    top:29vh;
-    right: 0;
-    width: 12vh;
-    opacity: 0;
-    transform: translateX(-1000px); 
-    animation: fadeInAndSlideIn2 .9s forwards;
-    animation-delay: 2.5s; /* Fade in and slide in after 2 seconds */
-    z-index: 1;
-}
-.hero .logobg2{    
-    top:29vh;
-    right: 0;
-    width: 12vh;
-    opacity: 0;
-    transform: translateX(-1000px); 
-    animation: fadeInAndSlideIn3 2s forwards;
-    animation-delay: 2s; /* Fade in and slide in after 2 seconds */
-    z-index: 1;
-}
-.hero .logobg3{    
-    top:29vh;
-    right: 0;
-    width: 12vh;
-    opacity: 0;
-    transform: translateX(-1000px); 
-    animation:  fadeInAndSlideIn3 2s forwards;
-    animation-delay: 2.5s; /* Fade in and slide in after 2 seconds */
-    z-index: 1;
-}
-.hero .logosecondary{
-    top:25vh;
-    width: 90vh;
-    opacity: 0; 
-    animation: fadeIn 4s forwards;
-    animation-delay: 3s; /* Fade in and slide in after 2 seconds */
-    z-index: 1;
-}
-.exito {
-    margin-left: 20px;
-    width: 200%; /* Adjust to your desired width */
-    height: 60vh; /* Show only 60% of the image height; adjust as needed */
-    overflow: hidden; /* Hide overflow content */
-    position: relative; /* Required for absolute positioning */
-}
-
-.clipped-image {
-    position: absolute; /* Position it absolutely within the container */
-    top: 50%; /* Center it vertically */
-    left: 98%; /* Center it horizontally */
-    width: auto; /* Maintain aspect ratio */
-    height: 100%; /* Full height of the container */
-    transform: translate(-50%, -50%); /* Center the image */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-}
-
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInAndSlideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes fadeInAndSlideIn2 {
-    to {
-        opacity: .8;
-        transform: translateX(75vh);
-    }
-}
-@keyframes fadeInAndSlideIn3 {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(48vh); /* Slide to 43vh */
-    }
-}
-
-
-.cta-button:hover {
-    background: var(--hover-color);
-    background-size: 200% 200%; /* Optional: for animated hover effect */
-    animation: gradient-animation 3s ease infinite; /* Optional: for smooth transition */
-}
-
-/* Optional: Add keyframes for animation if desired */
-@keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Content section styles */
-.content {
-    display: flex;
-    padding: 20px 0 20px 0;
-    align-items: center;
-    position: relative; /* Set to relative for absolute children */
-    gap:20px;    
-}
-
-
-#h2Servicios {
-    display: block;
-    font-size: 5vh;
-    text-align: center;
-    color: var(--main-color);
-}
-
-.feature {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.feature h3 {
-    font-size: 2vh;
-    margin: 0;
-    color: var(--main-color);
-}
-
-.feature p {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-/* Button styles */
-button {
-    background-color: var(--main-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
-}
-
-
-.animation-container{
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
-    z-index: 100;
-    pointer-events: none;
-    margin-top: 20px; /* Space above the footer */
-}
-
-/* Footer styles */
-.footer {
-    background-color: var(--main-color);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9em;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer p {
-    margin: 0;
-}
-/* Media query for mobile */
-@media (max-width: 768px) {
-    .hero h1{
-        margin-top:16vh;
-    }
-
-    .hero-container {
-        flex-direction: column; 
-    }
-    .hero-image{
-        margin-top: 0;
-    }
-    .hero .logo{
-        width: 40vh;
-        margin-left:2vh;
-    }
-    .hero .logobg{
-        width: 6vh;
-        top: 26vh;
-        margin-left: -14vh;
-
-    }
-    .hero .logobg2{
-        width: 10vh;
-        top:27vh;
-    }
-    .hero .logobg3{
-        width: 10vh;
-        top:27vh;
-
+        display: flex; /* Show hamburger on mobile */
     }
     
-    /* Optional: Add margin to the content section */
-    .content {
-        flex-direction: column;
-        flex: 1; /* This will push the footer to the bottom */
-        padding: 20px; /* Optional padding for content */
-        position: relative; /* Set to relative for absolute children */
-    }
+}
+/* Basic styles for the drawer */
+.drawer {
+    position: fixed;
+    top: 70px;
+    right: -320px; /* Hidden off-screen */
+    width: 300px; 
+    background-color: var(--secondary-color); 
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 1000; 
+}
 
-    .header .top-section{
-        flex-direction: column;
-        padding:20px;
-    }
-    .header .access{
-        flex-direction: row;
-    }
-    .header .access a{
-        margin-left: 10px;
-        width: 150px;
-    }
-    .header .logo img{
-        margin-bottom: 20px;
-    }
+.open {
+    right: 0; /* Slide in */
+}
 
-    @keyframes fadeInAndSlideIn2 {
-        to {
-            opacity: .8;
-            transform: translateX(50vh);
-        }
-    }
-    @keyframes fadeInAndSlideIn3 {
-        from {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateX(23vh); /* Slide to 43vh */
-        }
-    }
+.drawer-content {
+    padding: 20px; /* Padding inside the drawer */
+}
+
+.drawer-close {
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+    text-align: right; /* Align close button to the right */
+}
+
+/* Optional styles for the nav links inside the drawer */
+.drawer .nav-links {
+    display: flex;
+    flex-direction: column;
 }
