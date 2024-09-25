@@ -77,6 +77,64 @@
             
         </div>
     </div>
+    <section class="main-section">
+        <div class="hero-text">
+            <h1 id="heading"></h1>
+            <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
+            <a href="./contacto.html" class="cta-button">Escribinos!</a>                    
+            
+            <div class="hero-image">
+                <img id="heroImage" src="./branding/anim3.png" alt="Descriptive alt text">
+            </div>
+                <script>
+                    // Array of image sources
+                    const images = [
+                        './branding/anim3.png',
+                        './branding/anim2.png',
+                        './branding/anim8.png'
+                    ];
+                
+                    let currentIndex = 0;
+                
+                    // Function to change the image
+                    function changeImage() {
+                        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+                        document.getElementById('heroImage').src = images[currentIndex];
+                    }
+                
+                    // Change image every 6 seconds
+                    setInterval(changeImage, 6000);
+                </script>              
+        </div>
+        
+            <script>
+                const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
+                let headingIndex = 0;
+        
+                function typeHeading() {
+                    if (headingIndex < headingText.length) {
+                        if (headingText.charAt(headingIndex) === '\n') {
+                            document.getElementById("heading").innerHTML += "<br>";
+                        } else {
+                            document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
+                        }
+                        headingIndex++;
+                        setTimeout(typeHeading, 100);
+                    } else {
+                        fadeInElements();
+                    }
+                }
+        
+                function fadeInElements() {
+                    const paragraph = document.getElementById("paragraph");
+                    const ctaButton = document.getElementById("cta-button");
+                    paragraph.classList.add("visible"); 
+                    ctaButton.classList.add("visible"); 
+                }
+        
+                typeHeading();
+            </script>
+    </section>
 
     <script src="script.js" defer></script>
 </body>
