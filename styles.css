@@ -222,12 +222,12 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 3vw 5vw 4vw 5vw;
+    margin: 2vw 5vw 4vw 5vw;
     background-color: #ffffffef;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    height: 80vh;
+    height: 70vh;
     border-right: solid var(--main-color) 40px;
 }
 .b-section {
@@ -236,11 +236,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3vw 5vw 4vw 5vw;
+    margin: 2vw 5vw 4vw 5vw;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    height: 80vh;
+    height: 70vh;
     border-right: solid var(--main-color) 40px;
     background-image: url(./branding/partedetuexito.png);
     background-size: cover;
@@ -308,28 +308,31 @@ header {
 }
 
 .b-heading {
-    width: 75%;
-    height: 20%; /* 10% of the container height */
+    width: auto;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bd-color-dark);
-    font-size: 4vw;
+    color: whitesmoke;
+    font-size: 3vh;
     margin-top: 0;
-    background-color: #e7e5e5d0;    
+    margin-bottom: 40px;
+    background-color: #080808b4;    
     border-radius: 20px;
+    padding: 0 20px;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
-    gap: 60px; /* Space between cards */
+    gap: 40px; /* Space between cards */
+    margin-left: 40px;
 }
 
 .card {
     position: relative;
-    width: 300px; /* Set the width of the card */
-    height: 300px; /* Set the height of the card */
+    width: 23vw; /* Set the width of the card */
+    height: 23vw; /* Set the height of the card */
     perspective: 1000px; /* Add perspective for 3D effect */
 }
 
@@ -352,9 +355,20 @@ header {
     background-color: #ffffffbe; /* Background color for the front */
 }
 
+.card-front h3{
+    color: var(--main-color);
+}
+
 .card-back {
     background-color: #ffffffbe; /* Background color for the back */
     transform: rotateY(180deg); /* Rotate the back */
+}
+
+.card-back p{
+    margin: 20px;
+    color:var(--secondary-color);
+    text-align: center;
+    font-size: 1em;
 }
 
 .card:hover .card-front {
@@ -368,6 +382,34 @@ header {
 img {
     max-width: 100%; /* Ensure image is responsive */
     height: auto;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    border-top: grey solid 2px;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.footer a{
+    padding: 3px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:white;
+}
+.footer a:hover{
+    color: black;
+    background-color: var(--main-color);
 }
 
 @media(min-width: 980px){
