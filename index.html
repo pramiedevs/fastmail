@@ -82,28 +82,30 @@
         <section class="main-section">
             <div class="hero-text">
                 <h1 id="heading"></h1>
-                <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
+                <p id="paragraph" class="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
                 <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>
             </div>
             <div class="hero-image">
                 <img id="heroImage" src="./branding/anim2.png" alt="Descriptive alt text">
             </div>        
                 <script>
-                    const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
                     let headingIndex = 0;
-            
+                    let headingText = "Socios estratégicos\nde nuestros clientes";
+
                     function typeHeading() {
-                        if (headingIndex < headingText.length) {
-                            if (headingText.charAt(headingIndex) === '\n') {
-                                document.getElementById("heading").innerHTML += "<br>";
-                            } else {
-                                document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
-                            }
-                            headingIndex++;
-                            setTimeout(typeHeading, 100);
-                        } else {
-                            fadeInElements();
-                        }
+                    // Get the heading element
+                    const headingElement = document.getElementById("heading");
+                    
+                    // Update the heading text with the current index
+                    headingElement.innerHTML = headingText.substring(0, headingIndex);
+                    
+                    // Check if we have more characters to type
+                    if (headingIndex < headingText.length) {
+                        headingIndex++;
+                        setTimeout(typeHeading, 100);
+                    } else {
+                        fadeInElements(); // Call your fade-in function when done
+                    }
                     }
             
                     function fadeInElements() {
