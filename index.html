@@ -45,7 +45,7 @@
                         <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
                         <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
                     </div>
-                    <button id="accessButton">Acceder</button>
+                    <button id="accessButton">ACCEDER</button>
                     <div id="toggleButtons" style="display: none;">                
                             <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
                             <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
@@ -77,64 +77,61 @@
             
         </div>
     </div>
-    <section class="main-section">
-        <div class="hero-text">
-            <h1 id="heading"></h1>
-            <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
-            <a href="./contacto.html" class="cta-button">Escribinos!</a>                    
-            
-            <div class="hero-image">
-                <img id="heroImage" src="./branding/anim3.png" alt="Descriptive alt text">
+
+    <div class="horizontal-scroll-container">
+        <section class="main-section">
+            <div class="hero-text">
+                <h1 id="heading"></h1>
+                <p id="paragraph">Mejoramos la experiencia de compra de tus clientes<br>con entregas seguras, rápidas y efectivas.</p>
+                <a href="./contacto.html" class="cta-button" id="cta-button">Escribinos!</a>
             </div>
+            <div class="hero-image">
+                <img id="heroImage" src="./branding/anim2.png" alt="Descriptive alt text">
+            </div>        
                 <script>
-                    // Array of image sources
-                    const images = [
-                        './branding/anim3.png',
-                        './branding/anim2.png',
-                        './branding/anim8.png'
-                    ];
-                
-                    let currentIndex = 0;
-                
-                    // Function to change the image
-                    function changeImage() {
-                        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-                        document.getElementById('heroImage').src = images[currentIndex];
-                    }
-                
-                    // Change image every 6 seconds
-                    setInterval(changeImage, 6000);
-                </script>              
-        </div>
-        
-            <script>
-                const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
-                let headingIndex = 0;
-        
-                function typeHeading() {
-                    if (headingIndex < headingText.length) {
-                        if (headingText.charAt(headingIndex) === '\n') {
-                            document.getElementById("heading").innerHTML += "<br>";
+                    const headingText = "Socios estratégicos\nde nuestros clientes"; // Use \n for line breaks
+                    let headingIndex = 0;
+            
+                    function typeHeading() {
+                        if (headingIndex < headingText.length) {
+                            if (headingText.charAt(headingIndex) === '\n') {
+                                document.getElementById("heading").innerHTML += "<br>";
+                            } else {
+                                document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
+                            }
+                            headingIndex++;
+                            setTimeout(typeHeading, 100);
                         } else {
-                            document.getElementById("heading").innerHTML += headingText.charAt(headingIndex);
+                            fadeInElements();
                         }
-                        headingIndex++;
-                        setTimeout(typeHeading, 100);
-                    } else {
-                        fadeInElements();
                     }
-                }
-        
-                function fadeInElements() {
-                    const paragraph = document.getElementById("paragraph");
-                    const ctaButton = document.getElementById("cta-button");
-                    paragraph.classList.add("visible"); 
-                    ctaButton.classList.add("visible"); 
-                }
-        
-                typeHeading();
-            </script>
-    </section>
+            
+                    function fadeInElements() {
+                        const paragraph = document.getElementById("paragraph");
+                        const ctaButton = document.getElementById("cta-button");
+                        paragraph.classList.add("visible"); 
+                        ctaButton.classList.add("visible"); 
+                    }
+            
+                    typeHeading();
+                </script>
+        </section>
+        <section id="b-section" class="main-section">
+            hello world
+        </section>
+    </div>   
+    <script>
+        document.addEventListener('wheel', (event) => {
+            event.preventDefault(); // Prevent default vertical scroll
+            const scrollContainer = document.querySelector('.horizontal-scroll-container');
+            const scrollSpeed = 10; // Adjust this factor to change speed (higher = faster)
+
+            scrollContainer.scrollBy({
+                left: event.deltaY * scrollSpeed, // Multiply by scrollSpeed for faster scroll
+                behavior: 'smooth'
+            });
+        });
+    </script> 
 
     <script src="script.js" defer></script>
 </body>
