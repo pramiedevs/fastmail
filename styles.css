@@ -83,16 +83,9 @@ header {
     display: flex;
     align-items: center;
 }
-
-.nav-links a {
-    position: relative; /* Establish positioning context */
-    margin-right: 15px;
-    color: var(--main-color);
-    text-decoration: none;
-    overflow: hidden; /* Hide overflow */
-    transition: transform 0.3s ease; /* Smooth transition */
+.nav-links{
+    display: flex;
 }
-
 .nav-links a {
     position: relative; /* Establish positioning context */
     margin-right: 0;
@@ -100,13 +93,13 @@ header {
     text-decoration: none;
     padding: 5px 10px; /* Base padding */
     border-radius: 5px; /* Rounded corners */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
 .nav-links a:hover {
     color: white;
     transform: scale(1.02); /* Scale effect on hover */
     background-color: var(--main-color); /* Change background color on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
 #accessButton {
@@ -303,6 +296,8 @@ header {
 .cta-button:hover{
     background-color: var(--secondary-color);
     transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+
 }
 .cta-button2 {
     text-align: center;
