@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
    </head>
 
-    <body>
+    <body style="overflow-y: auto;">
         <header>
             <div class="header-container">
                 <div class="logo">
@@ -69,51 +69,59 @@
         
 
     <section class="content">
-
-        <!-- Sección 1 -->
-        <h2>¿Necesitás ayuda?</h2>
-        <center>
-        <p>Elegí la categoría correspondiente</p>
-        </center>
-        <br>
-        <div class="feature">
-            <h3>Soy comprador</h3>
-            <p>Ingresá acá para conocer las preguntas frecuentes o realizar tu propia consulta.</p>
-            <a href="./preguntas-frecuentes-comprador.html">
-                <button>Preguntas frecuentes</button>
-            </a>
+        <div class="flex-container">
+            <div class="section2">
+            <div class="feature">
+                <h3>Soy comprador</h3>
+                <p>Ingresá acá para conocer las preguntas frecuentes o realizar tu propia consulta.</p>
+                <a href="./preguntas-frecuentes-comprador.html">
+                    <button class="q-button">Preguntas frecuentes</button>
+                </a>
+            </div>
+            <div class="feature">
+                <h3>Soy vendedor</h3>
+                <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
+                <a href="./preguntas-frecuentes-vendedor.html">
+                <button class="q-button">Ver más información</button>
+                </a>
+            </div>
+            <div class="feature">
+                <h3>Servicio postal</h3>
+                <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
+                <a href="./preguntas-frecuentes-postal.html">
+                <button class="q-button">Ver más información</button>
+                </a>
+            </div>
+            </div>
+    
+            <div class="section3">
+                <div class="section1">
+                    <h2>¿Necesitás ayuda?</h2>
+                    <center>
+                        <p>Elegí la categoría correspondiente</p>
+                    </center>                    
+                </div>
+                <img src="./img/usuario.jpg">
+            </div>
+    
+            <div class="section4">
+                <!-- Sección 2 -->
+    
+            <h2>Ente Nacional de Comunicaciones</h2>
+            <p>Tiene como función controlar la prestación de los servicios postales para proteger los derechos de los usuarios y garantizarles el acceso a servicios de calidad</p>
+            <br><br>
+            <center>
+            <a href="https://www.enacom.gob.ar/"><img src="./img/ENACOM-LOGO.jpg"></a>
+            <a href="https://www.enacom.gob.ar/envios-prohibidos_p499#:~:text=Armas%20(excepto%20las%20de%20uso,por%20convenios%20del%20Correo%20Argentino)."><img src="./img/ENIOS-PRHOHIBIDOS-LOGO.jpg"></a>
+            </center>
+            <br><br>
+            <center>
+            <a href="https://autogestion.produccion.gob.ar/consumidores"><button class="q-button">Defensa del consumidor</button></a>
+            <a href="./uploads/formulariosENACOM.zip"><button class="q-button">⬇ Formularios Enacom</button></a>
+            </center>
+            </div>
         </div>
-        <div class="feature">
-            <h3>Soy vendedor</h3>
-            <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
-            <a href="./preguntas-frecuentes-vendedor.html">
-            <button>Ver más información</button>
-            </a>
-        </div>
-        <div class="feature">
-            <h3>Servicio postal</h3>
-            <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
-            <a href="./preguntas-frecuentes-postal.html">
-            <button>Ver más información</button>
-            </a>
-        </div>
-
-        <br><br>
-
-        <!-- Sección 2 -->
-        <h2>Ente Nacional de Comunicaciones</h2>
-        <p>Tiene como función controlar la prestación de los servicios postales para proteger los derechos de los usuarios y garantizarles el acceso a servicios de calidad</p>
-        <br><br>
-        <center>
-        <a href="https://www.enacom.gob.ar/"><img src="./img/ENACOM-LOGO.jpg"></a>
-        <a href="https://www.enacom.gob.ar/envios-prohibidos_p499#:~:text=Armas%20(excepto%20las%20de%20uso,por%20convenios%20del%20Correo%20Argentino)."><img src="./img/ENIOS-PRHOHIBIDOS-LOGO.jpg"></a>
-        </center>
-        <br><br>
-        <center>
-        <a href="https://autogestion.produccion.gob.ar/consumidores"><button>Defensa del consumidor</button></a>
-        <a href="./uploads/formulariosENACOM.zip"><button>⬇ Formularios Enacom</button></a>
-        </center>
-
+        
     </section>
 
     
@@ -123,18 +131,6 @@
     <a href="./contacto.html">Contáctanos</a>
     <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
 </div>   
-<script>
-    document.addEventListener('wheel', (event) => {
-        const scrollContainer = document.querySelector('.horizontal-scroll-container');
-        const scrollSpeed = 5; // Adjust this factor to change speed (higher = faster)
-
-        scrollContainer.scrollBy({
-            left: event.deltaY * scrollSpeed, // Multiply by scrollSpeed for faster scroll
-            behavior: 'smooth'
-        });
-    });
-</script> 
-
 <script src="script.js" defer></script>
 </body>
 </html>

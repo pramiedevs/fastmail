@@ -447,6 +447,64 @@ img {
     gap: 40px;
 }
 
+/*Other Sections*/
+
+.content {
+    margin: 20px; /* Add margin to the content area */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center sections horizontally */
+}
+
+.section2, .section3, .section4 {
+    flex: 1; /* Allow equal growth */
+    margin: 10px; /* Add margin for spacing between sections */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.section1, .section2, .section4{
+    border-radius: 20px;
+    background-color:#d8d2d2b2;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.section1 {
+    font-size: 15px;
+}
+.q-button{
+    background-color: var(--main-color);
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.section3 img{
+    border-radius: 20px;
+    width: auto;
+    height: 25vw;
+}
+
+
+/* Flex container for sections 2, 3, and 4 */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space out columns */
+    width: 100%; /* Full width of the parent */
+    height:75vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+}
+
+
+
+
 @media(min-width: 980px){
     .drawer-content{
         display:none;
