@@ -7,40 +7,70 @@
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
    </head>
 
-    <body>
-    <header class="header">
-        <div class="top-section">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./branding/whitelogo.png" alt="">
-                </a>                
+    <body style="overflow-y:auto;">
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./branding/redlogo.png" alt="Logo">
+                    </a>
+                    <div class="social">
+                        <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
+                            <img src="./img/facebook_icon.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/fastmailenvios" target="_blank">
+                            <img src="./img/instagram_icon.svg" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
+                            <img src="./img/linkedin_icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    <div id="nav" class="nav">
+                        <div id="navLinks" class="nav-links">
+                            <a href="./sobre-nosotros.html">Quienes somos</a>
+                            <a href="./servicios.html">Servicios</a>
+                            <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                            <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                        </div>
+                        <button id="accessButton">ACCEDER</button>
+                        <div id="toggleButtons" style="display: none;">                
+                                <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                                <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
+                            
+                            <button id="closeButton" class="close-button">✖</button>
+                        </div>
+                    </div>                
+                    <div id="hamburger" class="hamburger">                     
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </nav>
             </div>
-            <div class="access">
-                <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
-                <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+        </header>
+        <!-- Drawer for navigation -->
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <div id="toggleButtons">                
+                    <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                    <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
+                </div>
+                <div id="drawerNavLinks" class="nav-links">
+                    <a href="./sobre-nosotros.html">Quienes somos</a>
+                    <a href="./servicios.html">Servicios</a>
+                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                </div>
+                
             </div>
         </div>
-        <div class="bottom-section uppercase">
-            <div class="social">
-                <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="./img/facebook_icon.svg" alt="Facebook">Facebook</a>
-                <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="./img/instagram_icon.svg" alt="Instagram"> Instagram</a>
-                <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="./img/linkedin_icon.png" alt="Linkedin">LinkedIn</a>
-            </div>
-            <nav>
-                <a href="./sobre-nosotros.html">Quienes somos</a>
-                <a href="./servicios.html">Servicios</a>
-                <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
-            </nav>
-        </div>
-    </header>
 
     <section class="content" style="flex-direction: column; margin: 18vh auto; display: flex; align-items: center; text-align: center;">
-        
-        <h2 style="color: red; margin: 0;" >¡Escribinos!</h2>
-        <br>
         <style>
             .container {
+                margin-top: -15vh;
                 background-color: #d8d2d2b2;
                 padding: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -159,21 +189,34 @@
         </script>
     
         <br><br>
-    
-        <p>También podés comunicarte telefónicamente de Lunes a Viernes, de 9 a 17hs.<br>
-        📞 4766 6007 <br>
-        📞 7700-1042 <br>
-        📍 Av. Ader 495 (Esq. Thames) Boulogne, Buenos Aires, Argentina.</p>
-    
+        <div class="contact-footer">
+            <p class="p-foot">También podés comunicarte telefónicamente de Lunes a Viernes, de 9 a 17hs.</p>
+            <div class="contact-footerb">
+                <p>📞 4766 6007 / 📞 7700-1042</p>
+                <p>📍 Av. Ader 495 (Esq. Thames) Boulogne, Buenos Aires, Argentina.</p>
+            </div>
+        </div>    
     </section>
     
 
-    <footer class="footer">
-        <a href="./politica-de-privacidad.html">Política de Privacidad</a>
-        <a href="./contacto.html">Contáctanos</a>
-        <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
-    </footer>
+    
+<div class="footer">
+    <a href="./politica-de-privacidad.html">Política de Privacidad</a>
+    <a href="./contacto.html">Contáctanos</a>
+    <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+</div>   
+<script>
+    document.addEventListener('wheel', (event) => {
+        const scrollContainer = document.querySelector('.horizontal-scroll-container');
+        const scrollSpeed = 5; // Adjust this factor to change speed (higher = faster)
 
-        <script src="script.js"></script>
+        scrollContainer.scrollBy({
+            left: event.deltaY * scrollSpeed, // Multiply by scrollSpeed for faster scroll
+            behavior: 'smooth'
+        });
+    });
+</script> 
+
+<script src="script.js" defer></script>
 </body>
 </html>

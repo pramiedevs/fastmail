@@ -438,6 +438,19 @@ img {
     color: black;
     background-color: var(--main-color);
 }
+.contact-footer{
+    color:white;
+    background-color: #000000a2;
+    margin-top: -20px;
+}
+.contact-footer .p-foot{
+    margin: 20px 20px 0 20px;
+}
+.contact-footerb{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
 
 @media(min-width: 980px){
     .drawer-content{

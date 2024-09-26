@@ -7,59 +7,88 @@
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
    </head>
 
-    <body>
-    <header class="header">
-        <div class="top-section">
-            <div class="logo">Fastmail</div>
-            <div class="access">
-                <a href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
-                <a href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>
+    <body style="overflow-y: auto;">
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./branding/redlogo.png" alt="Logo">
+                    </a>
+                    <div class="social">
+                        <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
+                            <img src="./img/facebook_icon.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/fastmailenvios" target="_blank">
+                            <img src="./img/instagram_icon.svg" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
+                            <img src="./img/linkedin_icon.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    <div id="nav" class="nav">
+                        <div id="navLinks" class="nav-links">
+                            <a href="./sobre-nosotros.html">Quienes somos</a>
+                            <a href="./servicios.html">Servicios</a>
+                            <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                            <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                        </div>
+                        <button id="accessButton">ACCEDER</button>
+                        <div id="toggleButtons" style="display: none;">                
+                                <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                                <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
+                            
+                            <button id="closeButton" class="close-button">✖</button>
+                        </div>
+                    </div>                
+                    <div id="hamburger" class="hamburger">                     
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Drawer for navigation -->
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <div id="toggleButtons">                
+                    <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
+                    <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
+                </div>
+                <div id="drawerNavLinks" class="nav-links">
+                    <a href="./sobre-nosotros.html">Quienes somos</a>
+                    <a href="./servicios.html">Servicios</a>
+                    <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                    <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
+                </div>
+                
             </div>
         </div>
-        <div class="bottom-section">
-            <div class="social">
-                <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank"><img src="linkedin-icon.png" alt="Linkedin"></a>
-                <a href="https://www.instagram.com/fastmailenvios" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-            </div>
-            <nav>
-                <a href="./sobre-nosotros.html">Quienes somos</a>
-                <a href="./servicios.html">Servicios</a>
-                <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-                <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-    <div class="palette-selector">
-        <button data-palette="modern-elegance">Modern Elegance</button>
-        <button data-palette="corporate-chic">Corporate Chic</button>
-        <button data-palette="sophisticated-slate">Sophisticated Slate</button>
-        <button data-palette="dynamic-energy">Dynamic Energy</button>
-        <button data-palette="professional-flair">Professional Flair</button>
-    </div>
-</section>
-
-    <!-- Lo pongo ahora porque si saco todo lo de acá arriba se buguea todo xd después borrar -->
-    <br><br><br><br><br>
-
-
+    
     <section class="content">
         
         <!-- Sección 1 -->
         <div class="contenido1">
-        <h2 style="color: red;">Gestiones especiales</h2>
+        <h2 style="color: #cd2318; text-align: center;">Gestiones especiales</h2>
         <!-- Estilito provisorio pa darle forma -->
         <style>
+        .contenido1{
+            overflow-y: auto;
+        }   
+        .contenido1::-webkit-scrollbar {
+        display: block; /* For WebKit-based browsers (Chrome, Safari) */
+        } 
         .accordion {
             width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 800px;
+            margin: 60px auto;
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: #fff;
         }
+        
         .accordion-item {
             border-bottom: 1px solid #ddd;
         }
@@ -95,7 +124,7 @@
         .accordion-icon.rotate {
             transform: rotate(180deg);
         }
-    </style>
+        </style>
 
          <div class="accordion">
 
@@ -106,12 +135,12 @@
             </div>
             <div class="accordion-content">
                 <p>Distribución de resúmenes de tarjetas y de resúmenes de cuenta.
-<br>
-Distribucion de tarjetas de crédito y débito (con guarda y pactado).
-<br>
-Distribución de Mailings (Acciones de Marketing).</p>
-            </div>
-        </div>
+                <br>
+                Distribucion de tarjetas de crédito y débito (con guarda y pactado).
+                <br>
+                Distribución de Mailings (Acciones de Marketing).</p>
+                            </div>
+                        </div>
 
         <div class="accordion-item">
             <div class="accordion-header">
@@ -223,12 +252,11 @@ No ocupan lugar en los escritorios.</p>
         <br>
     </section>
 
-    <footer class="footer">
+    <div class="footer">
         <a href="./politica-de-privacidad.html">Política de Privacidad</a>
         <a href="./contacto.html">Contáctanos</a>
         <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
-    </footer>
-
-        <script src="script.js"></script>
+    </div>     
+    <script src="script.js" defer></script>
 </body>
 </html>
