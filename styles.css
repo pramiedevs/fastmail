@@ -21,16 +21,36 @@ html, body {
 }
 
 body {
-    font-family: Helvetica;
+    font-family: 'Gotham';
     margin: 0;
     padding: 0;
     color: #000000;
     background-size: cover;
     height: 100vh;
-    background-color: #a7a7a7;
+    background-color: #f3f3f3;
 }
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/textos\ generales_\ Gotham-Light.otf');
+     font-weight: 400;
+     font-style: normal;
+   }
+  
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/titulos_\ Gotham-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+   }
+    .normal {
+    font-weight: 400;
+  }
+    .bold {
+    font-weight: 700;
+  }
+
 header {
-    background-color: rgba(206, 206, 206, 0.671);
     padding: 10px 20px;
     border-bottom: solid var(--main-color) 4px;
 }
@@ -38,25 +58,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
-    display: flex; /* Make the logo container a flex container */
-    align-items: center; /* Align items vertically centered */
+    display: flex;
+    align-items: center;
     opacity: 0;
     animation: fadeInAndSlideIn 2s forwards;
     animation-delay: .5s;
-    background-color: #ffffff;
     border-radius: 10px;
     padding: 10px;
     z-index: 2;
 }
 .logo img{
-    width: 9vw;
+    width: 15vw;
+    min-width: 180px;
     
 }
 .logo:hover{
-    background-color: #585757;  
+    background-color: #fdcdcd; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 
@@ -89,13 +111,19 @@ header {
 .nav {
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 .nav-links{
     display: flex;
+    gap: 1vw;
+    position: absolute; /* Positioning for centering */
+    left: 50%; /* Start from the center */
+    transform: translateX(-50%); /* Move back half the width to center */
+    text-align: center;
 }
 .nav-links a {
-    position: relative; /* Establish positioning context */
-    margin-right: 0;
+    justify-content: center;
     color: var(--main-color);
     text-decoration: none;
     padding: 5px 10px; /* Base padding */
@@ -110,19 +138,20 @@ header {
 }
 
 #accessButton {
-    background-color: white;
-    margin-left: 20px;
-    padding: 10px;
+    background-color: var(--main-color);
+    margin-right: 20px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
-    color:var(--main-color);
-
+    color:white;
+    font-size: 20px;
     border: none;
 }
 #accessButton:hover {
     cursor: pointer;
-    color:white;
-    background-color: var(--main-color);
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: var(--secondary-color);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
 #toggleButtons {
@@ -133,8 +162,8 @@ header {
 .close-button {
     background: none;
     border: none;
-    color: white;
-    font-size: 20px;
+    color: var(--main-color);
+    font-size: 30px;
     cursor: pointer;
     margin-right: 2vw;
 
@@ -144,17 +173,17 @@ header {
     display: flex;
     padding: 10px;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--main-color);
     cursor: pointer;
     border: none;
     margin:5px;
     text-decoration: none;
-    color:var(--main-color);
+    color:white;
     margin-right: 2vw;
 
 }
 .another-button:hover {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color:white;
 
 }
@@ -224,7 +253,7 @@ header {
     background-color: #ffffffef;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+    border-radius: 80px;
     height: 70vh;
     border-right: solid var(--main-color) 40px;
 }
@@ -235,13 +264,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 2vw 5vw 7vw 5vw;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
     height: 70vh;
-    border-right: solid var(--main-color) 40px;
-    background-image: url(./branding/partedetuexito.png);
-    background-size: cover;
 }
 .hero-text {
     flex: 1; /* Allow text section to grow */
@@ -250,7 +273,7 @@ header {
 }
 #heading{
     color: var(--bd-color-dark);
-    font-size: 4vw;
+    font-size: 3vw;
     margin-top: 0;
 }
 #heading {
@@ -308,6 +331,7 @@ header {
     text-align: center;
     width: 25vh;
     margin-top: 5vh;
+    font-size: 18px;
     display: inline-block;
     background-color: var(--main-color);
     color: #dbdada;
@@ -315,7 +339,7 @@ header {
     letter-spacing: -.4px;
     border: none;
     border-radius: 6px;
-    padding: 14px 22px;
+    padding: 24px 30px;
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease;
 }
@@ -334,20 +358,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: whitesmoke;
-    font-size: 3vh;
-    margin-top: 0;
+    color: var(--bd-color-dark);
+    font-size: 3vw;
+    margin-top: 80px;
+    margin-bottom: 0;
     margin-left:40px;
-    margin-bottom: 40px;
-    background-color: #080808b4;    
-    border-radius: 20px;
-    padding: 0 20px;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Space between cards */
+    gap: 80px; /* Space between cards */
     margin-left: 40px;
 }
 
@@ -356,6 +377,7 @@ header {
     width: 23vw; /* Set the width of the card */
     height: 23vw; /* Set the height of the card */
     perspective: 1000px; /* Add perspective for 3D effect */
+    text-align: center;
 }
 
 .card-front, .card-back {
@@ -379,6 +401,7 @@ header {
 
 .card-front h3{
     color: var(--main-color);
+    font-size: 26px;
 }
 
 .card-back {
@@ -389,10 +412,10 @@ header {
 }
 
 .card-back p{
-    margin: 20px;
+    margin: 40px;
     color:white;
     text-align: center;
-    font-size: 1em;
+    font-size: 25px;
 }
 .card-front:hover, .card-back:hover {
     box-shadow: 0 -5px 12px rgb(0 0 0 / 60%);
