@@ -16,10 +16,6 @@ html, body {
     margin: 0; /* Remove default margin */
 }
 
-.html, body::-webkit-scrollbar {
-    display: none; /* For WebKit-based browsers (Chrome, Safari) */
-}
-
 body {
     font-family: 'Gotham';
     margin: 0;
@@ -107,10 +103,6 @@ header {
         transform: translateX(20px);
     }
 }
-.social {
-    margin-right: 20px;
-
-}
 
 .social a {
     margin-left: 10px; /* Space between social icons */
@@ -122,15 +114,27 @@ header {
     height: 25px; /* Set size for social icons */
     vertical-align: middle; /* Align images properly */
 }
+.social img:hover{
+    transform: scale(1.25);
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+.social-img:hover {
+    transform: scale(1.05);
+}
+
 
 .nav {
+    align-items: center;
     display: flex;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
 }
 .nav-links{
     display: flex;
-    gap: 1vw;
+    gap: 20px;
     position: absolute; /* Positioning for centering */
     left: 50%; /* Start from the center */
     transform: translateX(-50%); /* Move back half the width to center */
@@ -142,7 +146,7 @@ header {
     justify-content: center;
     color: var(--main-color);
     text-decoration: none;
-    padding: 5px 10px; /* Base padding */
+    padding: 10px 10px; /* Base padding */
     border-radius: 5px; /* Rounded corners */
 }
 
@@ -160,7 +164,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     color:white;
-    font-size: 20px;
+    font-size: 16px;
     border: none;
 }
 #accessButton:hover {
@@ -576,8 +580,11 @@ img {
     text-decoration: none;
     color:white;
 }
-.footer a:hover{
+.footer-a:hover{
     color: var(--main-color);
+    background-color: white;
+    transform: scale(1.02); /* Scale effect on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 .contact-footer{
     color:white;
