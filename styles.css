@@ -71,9 +71,24 @@ header {
     padding: 10px;
     z-index: 2;
 }
+.logo-f {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInAndSlideIn 2s forwards;
+    animation-delay: .5s;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 2;
+}
 .logo img{
     width: 15vw;
     min-width: 180px;
+    
+}
+.logo-f img{
+    width: 10vw;
+    min-width: 120px;
     
 }
 .logo:hover{
@@ -545,7 +560,7 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 15vw;
+    gap: 5vw;
     background-color:var(--main-color);
     color: white;
     text-align: center;
