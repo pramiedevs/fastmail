@@ -14,27 +14,16 @@
                     <a href="./index.html">
                         <img src="./branding/redlogo.png" alt="Logo">
                     </a>
-                    <div class="social">
-                        <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
-                            <img src="./img/facebook_icon.svg" alt="Facebook">
-                        </a>
-                        <a href="https://www.instagram.com/fastmailenvios" target="_blank">
-                            <img src="./img/instagram_icon.svg" alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
-                            <img src="./img/linkedin_icon.png" alt="LinkedIn">
-                        </a>
-                    </div>
                 </div>
                 <nav>
-                    <div id="nav" class="nav">
+                    <div id="nav" class="nav bold">
                         <div id="navLinks" class="nav-links">
                             <a href="./sobre-nosotros.html">Quienes somos</a>
                             <a href="./servicios.html">Servicios</a>
                             <a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
                             <a href="https://epresislv.fastmail.com.ar/seguimiento">Seguí tu envío</a>
                         </div>
-                        <button id="accessButton">ACCEDER</button>
+                        <button id="accessButton" class="bold">ACCEDER</button>
                         <div id="toggleButtons" style="display: none;">                
                                 <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
                                 <a class="another-button" id="anotherButton" href="https://trackerfm.fastmail.com.ar/">Fast Mail Postal</a>            
@@ -51,7 +40,7 @@
             </div>
         </header>
         <!-- Drawer for navigation -->
-        <div id="drawer" class="drawer">
+        <div id="drawer" class="drawer bold">
             <div class="drawer-content">
                 <div id="toggleButtons">                
                     <a class="another-button" id="anotherButton" href="https://epresislv.fastmail.com.ar/login">Fast Mail E-commerce</a>
@@ -66,6 +55,7 @@
                 
             </div>
         </div>
+        
         
 
     <section class="content">
@@ -251,23 +241,24 @@ Entre 5 a 10 días hábiles.</p>
 
     </section>
 
+
     <div class="footer">
         <a href="./politica-de-privacidad.html">Política de Privacidad</a>
         <a href="./contacto.html">Contáctanos</a>
         <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+    
+        <div class="social">
+            <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
+                <img src="./img/facebook_icon.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/fastmailenvios" target="_blank">
+                <img src="./img/instagram_icon.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
+                <img src="./img/linkedin_icon.png" alt="LinkedIn">
+            </a>
+        </div>
     </div>   
-    <script>
-        document.addEventListener('wheel', (event) => {
-            const scrollContainer = document.querySelector('.horizontal-scroll-container');
-            const scrollSpeed = 5; // Adjust this factor to change speed (higher = faster)
-    
-            scrollContainer.scrollBy({
-                left: event.deltaY * scrollSpeed, // Multiply by scrollSpeed for faster scroll
-                behavior: 'smooth'
-            });
-        });
-    </script> 
-    
     <script src="script.js" defer></script>
     
 </body>

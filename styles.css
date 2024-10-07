@@ -268,6 +268,15 @@ header {
     margin: 0 5vw 7vw 5vw;
     height: 70vh;
 }
+.c-section {
+    min-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw 7vw 5vw;
+    height: 70vh;
+}
 .hero-text {
     flex: 1; /* Allow text section to grow */
     max-width: 50%; /* Ensure it takes up to 50% */
@@ -299,6 +308,10 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 .b-section img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.c-section img {
     max-width: 100%; /* Ensure image is responsive */
     height: auto; /* Maintain aspect ratio */
 }
@@ -351,7 +364,9 @@ header {
     transform: translateX(-50%); /* Move back half the width to center */
     top:80vh;
     text-align: center;
-    width: 25vh;
+    justify-content:center;
+    width: 400px;
+    height:70px;
     font-size: 18px;
     background-color: var(--main-color);
     color: #dbdada;
@@ -606,13 +621,11 @@ img {
 /*Nosotros */
 .aboutUs {
     display: flex;
-    align-items: flex-start; /* Aligns items to the top */
-    position: relative; /* Position for zigzag */
+    flex-direction: column;
 }
 
 .contenido1 {
     flex: 1;
-    background-color: #ffdcaa; /* Keeping your existing color */
     padding: 20px;
     text-align: center;
     height: 85vh; /* Maintain a fixed height */
@@ -638,29 +651,51 @@ img {
 }
 
 .nuestraHistoria {
-    font-family:Helvetica, sans-serif;
-    font-size: 2.5em; /* Adjust size as needed */
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 3em; /* Adjust size as needed */
     margin-bottom: 20px;
-    font-style: italic;
     color:var(--main-color);
 }
 
 .historiaText {
-    font-family:monospace;
-    font-size: 1.1em; /* Standard text size */
+    text-align: left;
+    font-size: 1.3em; /* Standard text size */
     margin: 0;
     line-height: 1.6; /* Improve readability */
 }
 
 .rrhh {
-    background-color: var(--main-color);
-    color:white;
-    text-align: center; /* Center the text */
-    padding-top: 40px;
-    height: 40vh;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Space between cards */
+    margin-bottom:14vh; 
+    width:80%;
+    margin-left: 10%;
+}
+.card-rrhh{
+    padding: 20px;
+    gap: 140px;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: transform 0.6s; /* Smooth transition */
+    box-shadow: 13px -7px 12px rgb(0 0 0 / 30%);
+}
+.text-rrhh{
+width:40%;    
+}
+.text-rrhh h2{
+    text-transform: uppercase;
+    color:var(--main-color);
+    font-size: 2.5em;
+}
+.text-rrhh a{
+    text-decoration: none!important;
+    color:black;
 }
 
 /* Mobile Styles */
@@ -723,6 +758,11 @@ img {
         margin: -7vh 5vw 24vh 5vw;
         height: 85vh;
     }
+    .c-section{
+        flex-direction: column;
+        margin: -7vh 5vw 0vh 5vw;
+        height: 85vh;
+    }
     .b-section img {
         max-width: 23vh; /* Ensure image is responsive */
     }
@@ -735,11 +775,12 @@ img {
         font-size: 7vw;
     }
     #paragraph{
-        margin-top: 18vw;
+        margin-top: 24vw;
         font-size: 3vw; 
     }
     .cta-button{
         width: 18vh;
+        margin-top: 1vh;
     }
     .card2 {
         position: relative;
@@ -764,9 +805,12 @@ img {
     .formulario-btn{
         top:74vh;
     }
+    .rrhh{
+        margin-bottom: 3vh;
+    }
     .footer{
-        height: 15vh;
+        height: 10vh;
         position: inherit;
-        gap: 2px;
+        gap: 14px;
     }
 }
