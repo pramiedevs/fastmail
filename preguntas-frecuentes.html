@@ -55,46 +55,112 @@
                 
             </div>
         </div>
-        
-        
-        
+
+        <h1 class="b-heading bold" style="margin-top: 40px;">¿NECESITAS AYUDA?</h1>
+        <center>
+            <p>Elegí la categoría correspondiente</p>
+        </center>
+        <section id="b-section" class="b-section">
+
+            <div class="card-container">
+
+                <div class="card">
+                    <div class="card-front">
+                        <h3>SOY COMPRADOR</h3> 
+                        <img src="./img/usuario.jpg" alt="Image Description" />
+                    </div>
+                    <div class="card-back" id="dorso1">
+                        <p>Ingresá acá para conocer las preguntas frecuentes o realizar tu propia consulta.</p>
+                        <a href="./preguntas-frecuentes-comprador.html">
+                            <button class="cta-button2 visible cta1 bold">PREGUNTAS FRECUENTES</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <h3>SOY VENDEDOR</h3>
+                        <img src="./img/imagen-servicios.jpg" alt="Image Description" />
+                    </div>
+                    <div class="card-back" id="dorso2">
+                        <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
+                        <a href="./preguntas-frecuentes-vendedor.html">
+                            <button class="cta-button2 visible cta2 bold">VER MAS INFORMACIÓN</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <h3>SERVICIO POSTAL</h3>
+                        <img src="./img/paqueteria-e-commerce.jpg" alt="Image Description" />
+                    </div>
+                    <div class="card-back" id="dorso3">
+                        <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
+                        <a href="./preguntas-frecuentes-postal.html">
+                            <button class="cta-button2 visible cta3 bold">VER MAS INFORMACIÓN</button>
+                        </a>
+                    </div>
+                </div>
+                <script>
+                    const cta1 = document.querySelector('.cta1');
+                    const cta2 = document.querySelector('.cta2');
+                    const cta3 = document.querySelector('.cta3');
+                    const cardbg1 = document.getElementById('dorso1');
+                    const cardbg2 = document.getElementById('dorso2');
+                    const cardbg3 = document.getElementById('dorso3');
+                    
+                    cta1.addEventListener('mouseenter', () => {
+                        cardbg1.style.backgroundColor = 'red'; // Change to desired color
+
+                        cta1.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta1.addEventListener('mouseleave', () => {
+                        cardbg1.style.backgroundColor = ''; // Reset to original color
+                        cta1.style.color = ''; // Reset text color if needed
+                    });
+                    cta2.addEventListener('mouseenter', () => {
+                        cardbg2.style.backgroundColor = 'red'; // Change to desired color
+
+                        cta2.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta2.addEventListener('mouseleave', () => {
+                        cardbg2.style.backgroundColor = ''; // Reset to original color
+                        cta2.style.color = ''; // Reset text color if needed
+                    });
+                    cta3.addEventListener('mouseenter', () => {
+                        cardbg3.style.backgroundColor = 'red'; // Change to desired color
+                        cta3.style.color = 'var(--main-color)'; // Change text color if needed
+                    });
+                
+                    cta3.addEventListener('mouseleave', () => {
+                        cardbg3.style.backgroundColor = ''; // Reset to original color
+                        cta3.style.color = ''; // Reset text color if needed
+                    });
+                </script>
+            </div>
+            <!---
+            <div class="feature">
+                
+                
+                
+                <button>Ingresar</button>
+                </a>
+            </div>
+            <div class="feature">
+                
+                
+                <a href="https://trackerfm.fastmail.com.ar/">
+                <button>Ingresar</button>
+                </a>
+                
+            </div>
+        -->
+
+        </section>
+
 
     <section class="content">
-        <div class="flex-container">
-            <div class="section2">
-            <div class="feature">
-                <h3>Soy comprador</h3>
-                <p>Ingresá acá para conocer las preguntas frecuentes o realizar tu propia consulta.</p>
-                <a href="./preguntas-frecuentes-comprador.html">
-                    <button class="q-button">Preguntas frecuentes</button>
-                </a>
-            </div>
-            <div class="feature">
-                <h3>Soy vendedor</h3>
-                <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
-                <a href="./preguntas-frecuentes-vendedor.html">
-                <button class="q-button">Ver más información</button>
-                </a>
-            </div>
-            <div class="feature">
-                <h3>Servicio postal</h3>
-                <p>Ingresá acá para conocer preguntas frecuentes o realizar tu propia consulta.</p>
-                <a href="./preguntas-frecuentes-postal.html">
-                <button class="q-button">Ver más información</button>
-                </a>
-            </div>
-            </div>
-    
-            <div class="section3">
-                <div class="section1">
-                    <h2>¿Necesitás ayuda?</h2>
-                    <center>
-                        <p>Elegí la categoría correspondiente</p>
-                    </center>                    
-                </div>
-                <img src="./img/usuario.jpg">
-            </div>
-    
             <div class="section4">
                 <!-- Sección 2 -->
     
