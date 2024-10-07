@@ -546,8 +546,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 15vw;
-    border-top: grey solid 2px;
-    background-color: rgb(44, 42, 42);
+    background-color:var(--main-color);
     color: white;
     text-align: center;
     position: fixed;
