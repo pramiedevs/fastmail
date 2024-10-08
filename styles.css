@@ -332,8 +332,7 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 .b-section img {
-    max-width: 100%; /* Ensure image is responsive */
-    height: 275px; /* Maintain aspect ratio */
+    max-width: 80%; /* Ensure image is responsive */
 }
 .c-section img {
     max-width: 100%; /* Ensure image is responsive */
@@ -425,14 +424,13 @@ header {
     font-size: 40px;
     margin-bottom: 0;
     margin-top: 0;
-    margin-left:40px;
+    text-align: center;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     gap: 80px; /* Space between cards */
-    margin-left: 40px;
 }
 .card-container2 {
     display: flex;
@@ -567,9 +565,10 @@ header {
     transform: rotateY(0); /* Show back on hover */
 }
 
-img {
+
+img{
     max-width: 100%; /* Ensure image is responsive */
-    height: auto;
+    height: auto;  
 }
 
 
@@ -758,6 +757,13 @@ padding: 40px;
     .aboutUs {
         flex-direction: column; /* Stack the sections on mobile */
     }
+    #paragraph{
+        margin-top: 24vw!important;
+        font-size: 1.2em!important;
+    }
+    .main-section img{
+        min-width: 315px;
+    }
 }
 
 
@@ -777,7 +783,8 @@ padding: 40px;
     #heading {
         height: 9vh;
         margin-top: 4vh;
-        font-size: 2.5em!important;
+        font-size: 2.3em!important;
+        padding: 0!important;
     }
 }
 
@@ -829,12 +836,14 @@ padding: 40px;
         max-width: 85%;
     }
     #heading {
+        padding-left: 50px;
+        padding-right: 50px;
         height: 9vh;
         margin-top: 4vh;
-        font-size: 4em;
+        font-size: 3em;
     }
     #paragraph{
-        margin-top: 24vw;
+        margin-top: 21vw;
         font-size: 3vw; 
     }
     .cta-button{
