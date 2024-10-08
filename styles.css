@@ -507,6 +507,8 @@ header {
 .card-front2 h3{
     color: var(--main-color);
     font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .card-back {
@@ -716,8 +718,8 @@ img {
     margin-left: 10%;
 }
 .card-rrhh{
+    margin-top: 50px;
     padding: 20px;
-    gap: 140px;
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Ensure content doesn't overflow */
     display: flex;
@@ -732,7 +734,8 @@ img {
     -5px 0 14px rgba(0, 0, 0, 0.3);   /* Left shadow */
 }
 .text-rrhh{
-width:40%;    
+width:60%;    
+padding: 40px;
 }
 .text-rrhh h2{
     text-transform: uppercase;
@@ -743,6 +746,11 @@ width:40%;
     text-decoration: none!important;
     color:black;
 }
+.services-icon{
+    width: 80px;
+    height: 80px;
+}
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
