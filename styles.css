@@ -87,8 +87,8 @@ header {
     min-width: 120px;
     
 }
-.logo:hover{
-    background-color: #fdcdcd; 
+.logo img:hover{
+    transform: scale(1.15);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -308,7 +308,7 @@ header {
 }
 #heading{
     color: var(--bd-color-dark);
-    font-size: 3vw;
+    font-size: 2.5em;
     margin-top: 0;
 }
 #heading {
@@ -684,7 +684,6 @@ img {
     justify-content: center; /* Center the image */
     align-items: center; /* Center vertically */
     padding: 20px;
-    background-color:#eaeff2;
     height: 85vh;
 
 }
@@ -750,7 +749,9 @@ padding: 40px;
     width: 80px;
     height: 80px;
 }
-
+.service-mob{
+    display:none;
+}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -772,6 +773,11 @@ padding: 40px;
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column; /* Stack columns on small screens */
+    }
+    #heading {
+        height: 9vh;
+        margin-top: 4vh;
+        font-size: 2.5em!important;
     }
 }
 
@@ -800,12 +806,11 @@ padding: 40px;
     }
     .main-section{
         flex-direction: column;
-        margin: 4vh 5vw 0 5vw;
+        margin: 4vh 5vw 7vh 5vw;
         height: 70vh;
     }
     .main-section img {
-        max-width: 40vh; /* Ensure image is responsive */
-        max-height: 30vh;
+        max-height: 20vh;
     }
     .b-section{
         flex-direction: column;
@@ -818,7 +823,7 @@ padding: 40px;
         height: 85vh;
     }
     .b-section img {
-        max-width: 23vh; /* Ensure image is responsive */
+        max-height: 18vh; /* Ensure image is responsive */
     }
     .hero-text{
         max-width: 85%;
@@ -826,7 +831,7 @@ padding: 40px;
     #heading {
         height: 9vh;
         margin-top: 4vh;
-        font-size: 7vw;
+        font-size: 4em;
     }
     #paragraph{
         margin-top: 24vw;
@@ -867,5 +872,21 @@ padding: 40px;
         height: 10vh;
         position: inherit;
         gap: 14px;
+    }
+    .contenido2{
+    padding: 50px;    
+    }
+    .contenido2 img{
+        padding: 40px;    
+        }
+    .mob-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .service-mob{
+        display: block;
+    }
+    .service-desktop{
+        display:none;
     }
 }
