@@ -832,6 +832,9 @@ padding: 40px;
         margin: -7vh 5vw 24vh 5vw;
         height: 85vh;
     }
+    .b-heading{
+        margin-top: 12vh;
+    }
     .c-section{
         flex-direction: column;
         margin: 0 5vw 0vh 5vw;
@@ -875,12 +878,16 @@ padding: 40px;
     .card-container2 {
         display: flex;
         justify-content: center;
-        gap: 100px; /* Space between cards */
-        margin-top: 40px;
-        margin-right: 40px;
+        gap: 30px; /* Space between cards */
+        margin-right: 20px;
+    }
+
+    .card-front2, .card-back2{
+        width:110%;
     }
     .formulario-btn{
-        top:-8vh;
+        top:-10vh;
+        width: 250px;
     }
     .rrhh{
         margin-bottom: 3vh;
@@ -917,5 +924,17 @@ padding: 40px;
     .text-rrhh{
         padding: 0;   
         width: 100%; 
+    }
+    .card-front2{
+        padding: 0;
+    }
+    .card-front2 h3{
+        font-size: 1.3m;
+        margin-top: 0;
+
+    }
+    .card-front2 p{
+        font-size: .9em;
+        padding:15px;        
     }
 }
