@@ -753,6 +753,9 @@ padding: 40px;
 .service-mob{
     display:none;
 }
+#first-card-img{
+    width: 70%;    
+}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -903,5 +906,8 @@ padding: 40px;
     }
     .service-desktop{
         display:none;
+    }
+    #first-card-img{
+        width: 50%;
     }
 }
