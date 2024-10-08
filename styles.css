@@ -891,11 +891,9 @@ padding: 40px;
         gap: 14px;
         flex-direction: column;
     }
-    .contenido2{
-    padding: 50px;    
-    }
+
     .contenido2 img{
-        padding: 40px;    
+        padding-bottom: 20px;    
         }
     .mob-container{
         display: flex;
@@ -909,5 +907,15 @@ padding: 40px;
     }
     #first-card-img{
         width: 50%;
+    }
+    .card-rrhh{
+        margin-top: 0;   
+        flex-direction: column; 
+        text-align: center;
+
+    }
+    .text-rrhh{
+        padding: 0;   
+        width: 100%; 
     }
 }
