@@ -428,6 +428,18 @@ header {
     margin-top: 0;
     text-align: center;
 }
+.d-heading {
+    width: auto;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
 
 .card-container {
     display: flex;
@@ -832,7 +844,7 @@ padding: 40px;
         margin: -7vh 5vw 24vh 5vw;
         height: 85vh;
     }
-    .b-heading{
+    .d-heading{
         margin-bottom: 3vh;
         margin-top: 12vh;
     }
