@@ -83,6 +83,7 @@ header {
     
 }
 .logo-f img{
+    margin-left: -20px;
     width: 10vw;
     min-width: 120px;
     
@@ -768,9 +769,6 @@ padding: 40px;
     .main-section img{
         min-width: 220px;
     }
-    .footer{
-        margin-top: 30px;    
-    }
 }
 
 
@@ -885,9 +883,10 @@ padding: 40px;
         margin-bottom: 3vh;
     }
     .footer{
-        height: 10vh;
+        height: 35vh;
         position: inherit;
         gap: 14px;
+        flex-direction: column;
     }
     .contenido2{
     padding: 50px;    
