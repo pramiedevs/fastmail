@@ -768,9 +768,6 @@ padding: 40px;
     .main-section img{
         min-width: 220px;
     }
-    .card-front{
-        margin-top: 180px;
-    }
     .footer{
         margin-top: 30px;    
     }
@@ -872,7 +869,7 @@ padding: 40px;
         flex-direction: column;
         justify-content: center;
         gap: 20px; /* Space between cards */
-        margin-top: 34vh;
+        margin-top: 80vh;
     }
     .card-container2 {
         display: flex;
