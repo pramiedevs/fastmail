@@ -768,6 +768,12 @@ padding: 40px;
     .main-section img{
         min-width: 220px;
     }
+    .card-front{
+        margin-top: 180px;
+    }
+    .footer{
+        margin-top: 30px;    
+    }
 }
 
 
