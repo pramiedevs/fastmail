@@ -244,23 +244,79 @@ No ocupan lugar en los escritorios.</p>
     
 
 
-<div class="footer">
-    <a href="./politica-de-privacidad.html">Política de Privacidad</a>
-    <a href="./contacto.html">Contáctanos</a>
-    <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+    <div class="footer">
+        <div class="logo-f">
+            <a href="./index.html">
+                <img class="social-img" src="./branding/whitelogo.png" alt="Logo">
+            </a>
+        </div>
+        <a class="footer-a" href="./politica-de-privacidad.html">Política de Privacidad</a>
+        <a class="footer-a" href="./contacto.html">Contáctanos</a>
 
-    <div class="social">
-        <a href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
-            <img src="./img/facebook_icon.svg" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/fastmailenvios" target="_blank">
-            <img src="./img/instagram_icon.svg" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
-            <img src="./img/linkedin_icon.png" alt="LinkedIn">
-        </a>
-    </div>
-</div>       
+        <div class="social">
+            <a class="social-img" href="https://www.facebook.com/Fast-Mail-Correo-Privado-1583096695294388" target="_blank">
+                <img src="./img/facebook_icon.svg" alt="Facebook">
+            </a>
+            <a class="social-img" href="https://www.instagram.com/fastmailenvios" target="_blank">
+                <img src="./img/instagram_icon.svg" alt="Instagram">
+            </a>
+            <a class="social-img" href="https://www.linkedin.com/company/fastmailenvios/" target="_blank">
+                <img src="./img/linkedin_icon.png" alt="LinkedIn">
+            </a>
+        </div>
+        <p>&copy; 2024 Fastmail | R.N.P.S.P. 098</p>
+        <div class="whatsapp-button">
+            <a href="https://api.whatsapp.com/send?phone=541154035088&text=Hola, necesito ayuda!" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            </a>
+          </div>
+        
+          
+          <div id="whatsapp-chat" class="hide">
+            <div class="chat-header">
+                <img style="width: 250px;" src="./branding/whitelogo.png" alt="Logo">
+              <span class="close-chat">x</span>
+            </div>
+            <div class="chat-body">
+              <p>Hola 😊 ¿Cómo estás?</p>
+              <p>¿Podrías indicarnos tu email?</p>
+              <form id="whatsapp-form">
+                <input type="email" id="user-email" placeholder="Escribir email" required>
+                <button type="submit">
+                  <i class="fas fa-paper-plane">Enviar</i>
+                </button>
+              </form>
+            </div>
+          </div>
+    </div>   
+    
     <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var whatsappButton = document.querySelector('.whatsapp-button a');
+          var whatsappChat = document.getElementById('whatsapp-chat');
+          var closeChat = document.querySelector('.close-chat');
+    
+          whatsappButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            whatsappChat.classList.toggle('show');
+          });
+    
+          closeChat.addEventListener('click', function() {
+            whatsappChat.classList.remove('show');
+          });
+    
+          // Form submission handler
+          var whatsappForm = document.getElementById('whatsapp-form');
+          whatsappForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('user-email').value;
+            var phoneNumber = '541154035088';
+            var message = "Hola, solicito ayuda! Mi email es: ${email}";
+            var whatsappURL = "https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}";
+            window.open(whatsappURL, '_blank');
+          });
+        });
+      </script>
 </body>
 </html>
