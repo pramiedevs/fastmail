@@ -241,17 +241,136 @@
 
     </div>   
     <!--
-    <script>
-        document.addEventListener('wheel', (event) => {
-            const scrollContainer = document.querySelector('.horizontal-scroll-container');
-            const scrollSpeed = 5; // Adjust this factor to change speed (higher = faster)
+    <style>
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
 
-            scrollContainer.scrollBy({
-                left: event.deltaY * scrollSpeed, // Multiply by scrollSpeed for faster scroll
-                behavior: 'smooth'
-            });
-        });
-    </script> 
+.whatsapp-button img {
+    width: 60px;
+    height: 60px;
+}
+
+/* WhatsApp Chat Widget */
+#whatsapp-chat {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+#whatsapp-chat.show {
+    display: block;
+}
+
+.chat-header {
+    background-color: #075e54;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+.chat-body p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.chat-body form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-body input[type="email"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-body button {
+    background-color: #25d366;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-chat {
+    cursor: pointer;
+}
+
+</style>
+
+  
+  <div class="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=541154035088&text=Hola, necesito ayuda!" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+    </a>
+  </div>
+
+  
+  <div id="whatsapp-chat" class="hide">
+    <div class="chat-header">
+      <img src="https://whatsapp-widget.clientify.net/whatsappimages/StsKJdwFastmail logo.jpg" alt="WhatsApp Logo" style="width: 80px;">
+      <h4>FastMail</h4>
+      <span class="close-chat">x</span>
+    </div>
+    <div class="chat-body">
+      <p>Hola 😊 ¿Cómo estás?</p>
+      <p>¿Podrías indicarnos tu email?</p>
+      <form id="whatsapp-form">
+        <input type="email" id="user-email" placeholder="Escribir email" required>
+        <button type="submit">
+          <i class="fas fa-paper-plane">Enviar</i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var whatsappButton = document.querySelector('.whatsapp-button a');
+      var whatsappChat = document.getElementById('whatsapp-chat');
+      var closeChat = document.querySelector('.close-chat');
+
+      whatsappButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        whatsappChat.classList.toggle('show');
+      });
+
+      closeChat.addEventListener('click', function() {
+        whatsappChat.classList.remove('show');
+      });
+
+      // Form submission handler
+      var whatsappForm = document.getElementById('whatsapp-form');
+      whatsappForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('user-email').value;
+        var phoneNumber = '541154035088'; // Replace with your phone number
+        var message = Hola, solicito ayuda! Mi email es: ${email};
+        var whatsappURL = https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)};
+        window.open(whatsappURL, '_blank');
+      });
+    });
+  </script>
 
     -->
     
