@@ -458,6 +458,11 @@ header {
     justify-content: center;
     gap: 80px; /* Space between cards */
 }
+#servicios-container{
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Space between cards */
+}
 .card-container2 {
     display: flex;
     justify-content: center;
@@ -1048,6 +1053,13 @@ padding: 40px;
         gap: 20px; /* Space between cards */
         margin-top: 80vh;
     }
+    #servicios-container{
+        display: flex;
+        flex-direction: row!important;
+        justify-content: center;
+        gap: 10px; /* Space between cards */
+        margin-top: 1vh!important;
+    }
     .card-container2 {
         display: flex;
         justify-content: center;
@@ -1261,6 +1273,13 @@ padding: 40px;
         justify-content: center;
         gap: 20px; /* Space between cards */
         margin-top: 80vh;
+    }
+    #servicios-container{
+        display: flex;
+        flex-direction: row!important;
+        justify-content: center;
+        gap: 10px; /* Space between cards */
+        margin-top: 1vh!important;
     }
     .card-container2 {
         display: flex;

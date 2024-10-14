@@ -59,11 +59,11 @@
         
         
 
-    <section class="content">
+    <section class="content" style="margin-top: 10px;">
         
         <!-- Sección 1 -->
-        <div class="contenido1">
-        <h2 style="color: red;">Servicios postales</h2>
+        <div class="card-rrhh" style="flex-direction: column; width: 95%;">
+        <h2 class="b-heading">Servicios postales</h2>
         <center>
         <p>Las siguientes opciones corresponden a nuestros servicios postales. Seleccioná la que corresponda.</p>
         </center>
@@ -73,14 +73,16 @@
         <style>
         .container {
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
         }
         .rectangle {
+            text-transform: uppercase;
             width: 200px;
             height: 100px;
-            border: 1px solid black;
+            border: 1px solid #cd2318;;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -89,6 +91,7 @@
             background-color: #f0f0f0;
             cursor: pointer;
             transition: transform 0.2s;
+            color:#cd2318;
         }
         .rectangle:hover {
             transform: scale(1.05);
@@ -133,24 +136,29 @@
             cursor: pointer;
         }
         </style>
-        <div class="container">
-        <div class="rectangle" onclick="openModal('En este servicio las piezas postales (sobres) se entregan con la modalidad bajo puerta, es decir, sin la necesidad de presencia por parte del destinatario ni de los moradores de la vivienda; y en la cual no se toma ni se asienta ningún dato respecto de la entrega, ni del domicilio del destinatario. Este servicio es ideal para el envío de facturas, mailings y publicidad. No cuenta con seguimiento online, ni con constancia de entrega.')">Simple bajo puerta</div>
+        <div id="servicios-container" class="card-container bold" style="flex-wrap: wrap;">
+        <div class="rectangle card-rrhh onclick="openModal('En este servicio las piezas postales (sobres) se entregan con la modalidad bajo puerta, es decir, sin la necesidad de presencia por parte del destinatario ni de los moradores de la vivienda; y en la cual no se toma ni se asienta ningún dato respecto de la entrega, ni del domicilio del destinatario. Este servicio es ideal para el envío de facturas, mailings y publicidad. No cuenta con seguimiento online, ni con constancia de entrega.')">Simple bajo puerta</div>
 
-        <div class="rectangle" onclick="openModal('Es un servicio con entrega en mano (bajo firma), en donde el distribuidor asienta en un acuse de recibo físico o digital todos los datos de la entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Este servicio consta de 2 visitas. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como (No Responde). Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Acuse de recibo</div>
+        <div class="rectangle card-rrhh" onclick="openModal('Es un servicio con entrega en mano (bajo firma), en donde el distribuidor asienta en un acuse de recibo físico o digital todos los datos de la entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Este servicio consta de 2 visitas. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como (No Responde). Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Acuse de recibo</div>
 
-        <div class="rectangle" onclick="openModal('Se trata de un servicio de entrega en mano (bajo firma). Este servicio tiene la particularidad que se le adosa a la parte exterior de cada sobre una copia del contenido que tenga dicho sobre en su interior. Esta copia obra como un acuse de recibo en el que constarán todos los datos de entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Esta copia se rinde al remitente, por lo que es ideal para aquellos servicios en el que los clientes necesiten tener una constancia detallada de la correspondencia. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como: No Responde. Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Carta con copia</div>
+        <div class="rectangle card-rrhh" onclick="openModal('Se trata de un servicio de entrega en mano (bajo firma). Este servicio tiene la particularidad que se le adosa a la parte exterior de cada sobre una copia del contenido que tenga dicho sobre en su interior. Esta copia obra como un acuse de recibo en el que constarán todos los datos de entrega (nombre y apellido del receptor, sello, DNI, firma, aclaración y vínculo). Esta copia se rinde al remitente, por lo que es ideal para aquellos servicios en el que los clientes necesiten tener una constancia detallada de la correspondencia. En caso de no encontrar a nadie en el domicilio, la pieza puede entregarse bajo puerta (previa aprobación del cliente), tomándose los referenciales del domicilio de entrega, o devolverlas como: No Responde. Este servicio cuenta con seguimiento web y es ideal para aquellos servicios con alto valor agregado en el que sea necesario tener constancia de las entregas de la correspondencia.')">Carta con copia</div>
 
-        <div class="rectangle" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con copia certificada y aviso de recibo</div>
+        <div class="rectangle card-rrhh" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con copia certificada y aviso de recibo</div>
 
-        <div class="rectangle" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con firma digitalizada</div>
+        <div class="rectangle card-rrhh" onclick="openModal('Servicio habilitado por MEPRE (Ministerio de Justicia y Derechos Humanos – Presidencia de la Nación) para MEDIACIONES PREJUDICIALES según surge del Artículo 25, Decreto Reglamentario 1467/2011 y de la Resolución Ministerial N° 1196/13, del 25 de julio del 2013.')">Telegrama con firma digitalizada</div>
 
-        <div class="rectangle" onclick="openModal('Se trata de un formulario pre impreso con dos copias que se utiliza para diferentes tipos de notificaciones y/o intimaciones.')">Carta notificada</div>
+        <div class="rectangle card-rrhh" onclick="openModal('Se trata de un formulario pre impreso con dos copias que se utiliza para diferentes tipos de notificaciones y/o intimaciones.')">Carta notificada</div>
 
-        <div class="rectangle" onclick="openModal('Este servicio posibilita a los clientes enviar y recibir en un bolsín cerrado y rotulado todo tipo de documentación dirigida a destinos específicos y en los plazos fijados por acuerdo previo. Este servicio le permitirá a su empresa mantener un flujo permanente de comunicación e intercambio de documentación entre sucursales o con terceros.')">Bolsines</div>
-
-        <a href="./gestiones-especiales.html"><div class="rectangle">Gestiones especiales</div></a>
+        <div class="rectangle card-rrhh" onclick="openModal('Este servicio posibilita a los clientes enviar y recibir en un bolsín cerrado y rotulado todo tipo de documentación dirigida a destinos específicos y en los plazos fijados por acuerdo previo. Este servicio le permitirá a su empresa mantener un flujo permanente de comunicación e intercambio de documentación entre sucursales o con terceros.')">Bolsines</div>
         
-        <div class="rectangle" onclick="openModal('Este es un servicio de distribucion con entrega en la puerta del destinatario')">Puerta a puerta</div>
+        <div class="rectangle card-rrhh" >
+            
+            <a href="./gestiones-especiales.html" style="text-decoration: none; color: #cd2318;">Gestiones especiales            
+            </a>
+        </div>
+       
+
+        <div class="rectangle card-rrhh" onclick="openModal('Este es un servicio de distribucion con entrega en la puerta del destinatario')">Puerta a puerta</div>
         </div>
 
         <!-- The Modal -->
@@ -180,7 +188,7 @@
 
         </div>
         <br><br>
-        <center><a href="./descarga-de-archivos.html"><button>→ Descarga de archivos</button></a></center>
+        <center><a href="./descarga-de-archivos.html"><button class="q-button" style="margin-bottom: 30px;">→ Descarga de archivos</button></a></center>
 
     </section>
 
