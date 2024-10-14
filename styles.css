@@ -909,12 +909,9 @@ padding: 40px;
         margin: 4vh 5vw 7vh 5vw;
         height: 70vh;
     }
-    .main-section img {
-        max-height: 20vh;
-    }
     .b-section{
         flex-direction: column;
-        margin: -15vh 5vw 24vh 5vw!important;
+        margin: 2vh 5vw 24vh 5vw!important;
         height: 85vh;
     }
     .d-heading{
@@ -1006,7 +1003,7 @@ padding: 40px;
         margin-bottom: 3vh;
     }
     .footer{
-        height: 50vh!important;
+        height: 350px!important;
         position: inherit;
         gap: 14px;
         flex-direction: column;
@@ -1060,9 +1057,11 @@ padding: 40px;
     }
     .main-section{
         border: none;
+        height:520px!important;
     }
-    .main-section img{
-        min-width: 220px;
+    .main-section img {
+        max-height: 150px!important;
+        max-width: 200px!important;
     }
     #whatsapp-chat {
         background-color: white;
