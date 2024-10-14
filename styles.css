@@ -12,9 +12,21 @@
 }
 html, body {
     height: 100%; /* Set height to 100% for body and html */
-    overflow-x: hidden; /* Disable both X and Y scrolling */
+    overflow-x: hidden;
     margin: 0; /* Remove default margin */
+    overflow-y: auto;
 }
+::-webkit-scrollbar-thumb{
+    background-color:var(--main-color);
+}
+::-webkit-scrollbar-track-piece{
+    background-color: rgb(201, 201, 201);
+}
+::-webkit-scrollbar{
+    display: block;
+    z-index: 10000;
+}
+
 
 body {
     font-family: 'Gotham';
@@ -862,6 +874,9 @@ padding: 40px;
 #h2-descarga{
     font-size: 4em;
 }
+#gestiones-especiales{
+    margin-top: 130px;
+}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -1298,4 +1313,5 @@ padding: 40px;
     #p-descarga{
         margin-top: 40px;
     }
+    #gestiones-especiales{}
 }

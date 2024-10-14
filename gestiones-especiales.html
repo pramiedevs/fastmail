@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
    </head>
 
-    <body style="overflow-y: auto;">
+    <body>
         <header>
             <div class="header-container">
                 <div class="logo">
@@ -59,16 +59,11 @@
     <section class="content">
         
         <!-- Sección 1 -->
-        <div class="contenido1">
-        <h2 style="color: #cd2318; text-align: center;">Gestiones especiales</h2>
+        <div id="gestiones-especiales" class="card-rrhh" style="flex-direction: column;">
+        <h2 class="b-heading">Gestiones especiales</h2>
         <!-- Estilito provisorio pa darle forma -->
         <style>
-        .contenido1{
-            overflow-y: auto;
-        }   
-        .contenido1::-webkit-scrollbar {
-        display: block; /* For WebKit-based browsers (Chrome, Safari) */
-        } 
+
         .accordion {
             width: 80%;
             max-width: 800px;
