@@ -600,7 +600,7 @@ img{
 
 .footer {
     display: flex;
-    height: 7vh;
+    height: 15vh;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -674,12 +674,18 @@ img{
     font-size: 15px;
 }
 .q-button{
-    background-color: var(--main-color);
-    padding: 10px;
+    background-color: var(--secondary-color);
+    padding: 15px;
     font-size: 15px;
     color: white;
     border: none;
     border-radius: 10px;
+}
+.q-button:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: var(--main-color);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 .section3 img{
     border-radius: 20px;
@@ -877,7 +883,10 @@ padding: 40px;
 #gestiones-especiales{
     margin-top: 130px;
 }
-
+#paqueteria{
+    margin-top: 130px;
+ 
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     .aboutUs {
@@ -1255,7 +1264,7 @@ padding: 40px;
         margin-bottom: 3vh;
     }
     .footer{
-        height: 44vh;
+        height: 350px;
         position: inherit;
         gap: 14px;
         flex-direction: column;
@@ -1313,5 +1322,5 @@ padding: 40px;
     #p-descarga{
         margin-top: 40px;
     }
-    #gestiones-especiales{}
+    /*#gestiones-especiales{}*/
 }
