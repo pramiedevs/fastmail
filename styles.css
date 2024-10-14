@@ -887,6 +887,10 @@ padding: 40px;
     margin-top: 130px;
  
 }
+#politica{
+    margin-top: 130px;
+    width: 60vw;
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     .aboutUs {
@@ -1150,6 +1154,9 @@ padding: 40px;
     #descarga-de-archivos{
         margin-top: 0!important;
     }
+    #politica{
+        width: 80vw!important;    
+    }
 }
 
 
@@ -1321,6 +1328,9 @@ padding: 40px;
     }
     #p-descarga{
         margin-top: 40px;
+    }
+    #politica{
+        width: 85vw;
     }
     /*#gestiones-especiales{}*/
 }
